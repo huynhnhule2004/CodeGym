@@ -11,21 +11,27 @@
     <p id="d"></p>
     <script>
         function doiNgay() {
-            let m = parseInt(document.getElementById("m").value);
-            let d ;
-            switch(m) {
-                case 1: case 3: case 5: case 7: case 8: case 10: case 12: 
-                    d = "31 ngay";
-                    break;
-                case 2: 
-                    d = "28 hoac 29 ngay"
-                    break;
-                case 4: case 6: case 9: case 11: 
-                    d = "30 ngay";
-                    break;
+            let month = +document.getElementById("m").value;
+            let days = -1;
+            if (
+                month == 1 ||
+                month == 3 ||
+                month == 5 ||
+                month == 7 ||
+                month == 8 ||
+                month == 10 ||
+                month == 12
+            ) {
+                days = 31;
             }
-            document.getElementById('d').innerHTML = "Thang" + ' ' + m + ' ' + 'co' + ' ' + d;
-            
+            if (month == 2) {
+                days = "28 hoac 29";
+            }
+            if (days == -1) {
+                document.getElementById("d").innerHTML = "Tháng không tồn tại!";
+            } else {
+                document.getElementById("d").innerHTML = "Tháng" + month + "có" + days + "ngày!";
+            }
         }
     </script>
 </body>
