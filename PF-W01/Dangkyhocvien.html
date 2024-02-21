@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký học viên</title>
+    <style>
+        .vertical-align-top {
+            vertical-align: top; /* Đặt chữ dính sát lề trên */
+        }
+        table {
+            width: 500px;
+            height: 300px;
+            background: #FEF7AC;
+        }
+        p {
+            background-color: #D3F9D5;
+            margin: 0;
+            font-size: larger;
+            color: blue;
+            font-weight: bold;
+        }
+        .form-group {
+            color: blue;
+        }
+        button {
+            border: none;
+            box-shadow: 2px 2px 2px gray;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <table>
+            <tr>
+                <td colspan="2"><p>ĐĂNG KÝ HỌC VIÊN</p></td>
+            </tr>
+            <tr>
+                <td class="form-group">Họ và tên</td>
+                <td><input type="text" style="width: 200px;"></td>
+            </tr>
+            <tr>
+                <td class="form-group">Ngày sinh</td>
+                <td><input type="text" style="width: 100px;"></td>
+            </tr>
+            <tr>
+                <td class="form-group">Giới tính</td>
+                <td>
+                    <label for=""><input type="radio" name="gebder">Nam</label>
+                    <label for=""><input type="radio" name="gebder">Nữ</label>
+                </td>
+            </tr>
+            <tr>
+                <td class="form-group vertical-align-top">Địa chỉ</td>
+                <td><textarea name="" id="" cols="20" rows="3"></textarea></td>
+            </tr>
+            <tr>
+                <td class="form-group">Lớp</td>
+                <td>
+                    <select id="fruit" name="fruit">
+                          <option value="apple">--Chọn lớp--</option>
+                      </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="form-group">Email</td>
+                <td><input type="text" style="width: 150px;"></td>
+            </tr>
+            <tr>
+                <td class="form-group">Điện thoại</td>
+                <td><input type="text" style="width: 150px;"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button>Đăng ký</button>
+                    <button>Nhập lại</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

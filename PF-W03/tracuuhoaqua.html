@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <h1>Gia hoa qua</h1>
+        <input type="text" id="qua">
+        <button onclick="gia()" type="button">Xem gia</button>
+        <h1 id="kq">Gia</h1>
+    </form>
+    <script>
+        function gia() {
+            let tenqua = document.getElementById('qua').value;
+            let gia;
+            switch (tenqua) {
+                case 'oi':
+                case 'dua hau': 
+                gia = 20000;
+                break;
+
+                case 'tao': case 'xoai': gia = 30000;
+                break;
+
+                case 'cam': case 'chom chom': gia = 40000;break;
+                case 'mang cut': gia= 50000;
+                break;
+                default:
+                    gia = 'Khong tim thay';break;
+            }
+           document.getElementById('kq').innerHTML = 'Gia cua ' + tenqua + ' la '+ gia +' VND/kg';
+        }
+    </script>
+</body>
+</html>

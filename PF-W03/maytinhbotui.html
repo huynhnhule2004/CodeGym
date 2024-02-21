@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            color: rgb(32, 96, 213);
+            border: 1px solid #ccc;
+            background: white;
+            text-align: right;
+        }
+        input:focus {
+            outline: none;
+            text-align: right;
+        }
+        button {
+        width: 35px;
+        color: rgb(32, 96, 213);
+        border: 2px solid #ccc;
+        background: white;
+        }
+        form {
+            border: 5px solid black;
+            width: 180px
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <table>
+            <tr>
+                <td colspan="4"><input type="text" id="scr"></td>
+            </tr>
+            <tr>
+                <td><button onclick="nhap('1')" type="button">1</button></td>
+                <td><button onclick="nhap('2')" type="button">2</button></td>
+                <td><button onclick="nhap('3')" type="button">3</button></td>
+                <td><button onclick="nhap('+')" type="button">+</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="nhap('4')" type="button">4</button></td>
+                <td><button onclick="nhap('5')" type="button">5</button></td>
+                <td><button onclick="nhap('6')" type="button">6</button></td>
+                <td><button onclick="nhap('-')" type="button">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="nhap('7')" type="button">7</button></td>
+                <td><button onclick="nhap('8')" type="button">8</button></td>
+                <td><button onclick="nhap('9')" type="button">9</button></td>
+                <td><button onclick="nhap('*')" type="button">x</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="nhaplai()" type="button">C</button></td>
+                <td><button onclick="nhap('0')" type="button">0</button></td>
+                <td><button onclick="tinh()" type="button">=</td>
+                <td><button onclick="nhap('/')" type="button">/</button></td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function nhap(kt) {
+            document.getElementById("scr").value += kt;
+        }
+        function nhaplai() {
+            document.getElementById("scr").value = "";
+        }
+        function tinh() {
+            let bt = document.getElementById("scr").value;
+            document.getElementById("scr").value = eval(bt);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kiem tra 3 canh cua tam giac</title>
+</head>
+<body>
+    <script>
+        let a = parseInt(prompt('Nhập số điện tiêu thụ: '))
+        if (a >= 1 && a < 100) {
+            alert('Số tiền phải trả là: ' + a * 1800);
+        } else if (a < 200) {
+            alert('Số tiền phải trả là: ' + a * 2000);
+        } else if (a >= 200) {
+            alert('Số tiền phải trả là: ' + a * 2200);
+        }
+    </script>
+</body>
+</html>

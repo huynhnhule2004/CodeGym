@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <table>
+            <tr>
+                <th>Amount</th>
+                <th style="width: 20px;"></th>
+                <th>From Currency</th>
+                <th style="width: 20px;"></th>
+                <th>To Currency</th>
+               
+            </tr>
+            <tr>
+                <td> <input type="text" id="tien"></td>
+                <td style="width: 20px;"></td>
+                <td>
+                    <select name="" id="from">
+                        <option value="1">Việt Nam</option>
+                        <option value="24785">Mỹ</option>
+                        <option value="165">Nhật</option>
+                    </select>
+                </td>
+                <td style="width: 20px;"></td>
+                <td>
+                    <select name="" id="to">
+                        <option value="1">Việt Nam</option>
+                        <option value="24785">Mỹ</option>
+                        <option value="165">Nhật</option>
+                    </select>
+                </td>
+                <td style="width: 20px;"></td>
+                <td ><button onclick='chuyen()'>Convert</button></td>
+                <td ><button onclick="datlai()">Dat lai</button></td>
+                
+            </tr>
+        </table>
+    </form>
+    <h1 id="kq"></h1>
+    <script>
+        function chuyen() {
+            let t = document.getElementById('tien').value;
+            let from = document.getElementById('from').value;
+            let to = document.getElementById('to').value;
+            let kq = (t * from) / to;
+            document.getElementById('kq').innerHTML = 'Ket qua la: ' + kq;
+        }
+        function datlai() {
+            document.getElementById("tien").value = "";
+            document.getElementById("from").value = 1;
+            document.getElementById("to").value = 1;
+            document.getElementById("kq").innerHTML = "";
+        }
+    </script>
+</body>
+</html>

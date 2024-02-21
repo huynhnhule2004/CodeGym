@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let tienvay = +prompt('Nhập số tiền vay: ');
+        let laisuat = +prompt('Nhập vào lãi suất: ');
+        let n = +prompt('Nhập vào số năm: ');
+        laidon = tienvay * (laisuat / 100) * 1;
+        if (n == 1) {
+            document.write('Lãi: '+ laidon);
+        }
+        else {
+            laidon = tienvay + n * laidon;
+            document.write('Lãi: '+ laidon);
+            
+        }
+    </script>
+</body>
+</html>
