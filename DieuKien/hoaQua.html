@@ -9,7 +9,7 @@
     <h1>Giá hoa quả</h1>
     <input type="text" id="hq">
     <button onclick="xem()">Xem giá</button>
-    <h2>VND/KG</h2>
+    <h2 id="kq">VND/KG</h2>
     <script>
         function xem() {
             let hq = document.getElementById('hq').value.toLowerCase();
@@ -18,7 +18,7 @@
                 gia = 20;
             }
             if (hq == "dưa hấu") {
-                gia == 20;
+                gia = 20;
             }
             if (hq == "táo") {
                 gia = 30;
