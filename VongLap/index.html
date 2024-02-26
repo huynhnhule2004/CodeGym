@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>>
+<body>
     <script>
         // Vòng lặp => Giúp thực hiện các công việc lặp lại 1 cách ngắn gọn
         // In 1000 dòng "Hello" ra màn hình với document.write()
@@ -16,21 +16,21 @@
        // Nhập vào a, b. In ra các số từ a đến b
        // Nhập vào a, b. In ra các số chẵn từ a đến b
         // Nhập vào a,b. In chẵn trong h1 và lẻ trong h2 từ a-b
-        let a = +prompt("Nhập vào a: ");
-        let b = +prompt("Nhập vào b: ");
-        for (let i = a; i <= b; i++) {
-            if (i % 2 == 0) {
-                document.write("<h1>" + i + "</h1>");
-            } else {
-                document.write("<h2>" + i + "</h2>");
-            }
-        }
-
+       
 
         // Nhập vào a,b. Tính tích các số từ a - b
 
-        // Nhập vào a, b ,c. In ra các số chẵn lớn hơn c từ đến b
 
+        // Nhập vào a, b ,c. In ra các số chẵn lớn hơn c từ đến b
+        let a = +prompt("Nhập vào a: ");
+        let b = +prompt("Nhập vào b: ");
+        let c = +prompt("Nhập vào c: ");
+
+        for (let i = a; i <= b; i++) {
+            if (i % 2 == 0  && i > c) {
+                document.write(i + "<br>");
+            } 
+        }
 
     </script>
 </body>
