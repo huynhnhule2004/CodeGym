@@ -19,18 +19,17 @@
        
 
         // Nhập vào a,b. Tính tích các số từ a - b
-
-
-        // Nhập vào a, b ,c. In ra các số chẵn lớn hơn c từ đến b
+        //làm 1 để ngoài, nhiều để trong
         let a = +prompt("Nhập vào a: ");
         let b = +prompt("Nhập vào b: ");
-        let c = +prompt("Nhập vào c: ");
-
-        for (let i = a; i <= b; i++) {
-            if (i % 2 == 0  && i > c) {
-                document.write(i + "<br>");
-            } 
+        let tich = 1;
+        while (a <= b) {
+            tich = tich * a;
+            a++;
         }
+        document.write(tich);
+        // Nhập vào a, b ,c. In ra các số chẵn lớn hơn c từ a đến b
+        
 
     </script>
 </body>
