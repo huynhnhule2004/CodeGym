@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         // Nhập vào a,b
+        //  let a = +prompt("Nhập vào a: ");
+        // let b = +prompt("Nhập vào b:");
+        // //1. Tính tích các số chẵn từ a đến b
+        // let tich = 1;
+        // for (let i = a; i <= b; i++) {
+        //     if (i % 2 == 0) {
+        //         tich *= i;
+        //     }
+        // }
+        // //2. Tính tổng các số chia hết cho 3 và lớn hơn 2
+        // let tong = 1;
+        // for (let i = a; i <= b; i++) {
+        //     if (i > 2 && i % 3 == 0) {
+        //         tong += i;
+        //     }
+        // }
+        // //3. Đếm số lượng số chia hết cho 3
+        // let dem = 0;
+        // for (let i = a; i <= b; i++) {
+        //     if (i % 3 == 0) {
+        //         tich += 1;
+        //     }
+        // }
+        // Hãy viết một chương trình in ra các số từ 1 đến 100. Nhưng nếu số chia hết cho 3 thì in ra "Fizz", 5 thì in ra "Buzz" thay vì in ra số đó.
+        //  Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ "FizzBuzz".
+            let a = +prompt("Nhập vào a: ");
+            let b = +prompt("Nhập vào b:");
+            for (let i = a; i <= b; i++) {
+                if (i % 3 == 0 && i % 5 !== 0 ) {
+                    document.write('Fizz');
+                } 
+                if (i % 5 == 0 && i % 3 !== 0 ) {
+                    document.write('Buzz');
+                }
+                if (i % 3 == 0 && i % 5 == 0 ) {
+                    document.write('FizzBuzz');
+                }
+                if (i % 3 !== 0 && i % 5 !== 0 ) {
+                    document.write(i);
+                }
+                document.write("<br>");
+            }
+    </script>
+</body>
+</html>
