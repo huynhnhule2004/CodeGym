@@ -13,17 +13,20 @@
     // Bài 4: Tìm số đầu tiên trong dãy fibonacci chia hết cho 5
     // Bài 5: Tính tổng của 20 số đầu tiên trong dãy fibonacci.
     // Bài 6: Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên.
-    let sum = 0;
-    let count = 0;
-    let num = 1;
-    while ( count < 30) {
-        if (num % 7 == 0) {
-            sum += num;
-            count++
+    // Bài 7: Hãy viết một chương trình in ra các số từ 1 đến 100. Nhưng nếu số chia hết cho 3 thì in ra “Fizz”, 5 thì in ra “Buzz” thay vì in ra số đó. Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ “FizzBuzz”.
+    for (let i =1; i <= 100 ; i++) {
+        if (i % 3 == 0 && i % 5 == 0) {
+            document.write('FizzBuzz' + '&nbsp')
         }
-        num++;
+        else if (i % 3 == 0) {
+            document.write('Fizz' + '&nbsp')
+        }
+        else if (i % 3 == 0) {
+            document.write('Buzz' + '&nbsp')
+        } else {
+            document.write(i+ '&nbsp');
+        }
     }
-    document.write(`Tổng là: ${sum}`);
     </script>
 </body>
 </html>
