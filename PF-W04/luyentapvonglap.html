@@ -12,25 +12,18 @@
     // Bài 3: Hiển thị ra 20 số trong dãy fibonacci đầu tiên.
     // Bài 4: Tìm số đầu tiên trong dãy fibonacci chia hết cho 5
     // Bài 5: Tính tổng của 20 số đầu tiên trong dãy fibonacci.
-    // Tính tổng của 20 số đầu tiên trong dãy Fibonacci
-function sumOfFirst20FibonacciNumbers() {
+    // Bài 6: Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên.
     let sum = 0;
-    let a = 0;
-    let b = 1;
-
-    for (let i = 0; i < 20; i++) {
-        sum += a; // Thêm số Fibonacci hiện tại vào tổng
-        let nextFibonacci = a + b;
-        a = b;
-        b = nextFibonacci;
+    let count = 0;
+    let num = 1;
+    while ( count < 30) {
+        if (num % 7 == 0) {
+            sum += num;
+            count++
+        }
+        num++;
     }
-
-    return sum;
-}
-
-// Tính và hiển thị tổng của 20 số đầu tiên trong dãy Fibonacci
-let sum = sumOfFirst20FibonacciNumbers();
-document.write("Tổng của 20 số đầu tiên trong dãy Fibonacci là:", sum);
+    document.write(`Tổng là: ${sum}`);
     </script>
 </body>
 </html>
