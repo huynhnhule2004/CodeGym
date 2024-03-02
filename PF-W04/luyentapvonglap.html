@@ -9,16 +9,29 @@
     <script>
     // Bài 1: Sử dụng vòng lặp để đếm từ 1 đến 100. Khi số là 99, hiển thị hộp thoại thông báo là đã hoàn thành.
     // Bài 2: Sử dụng hàm prompt() để lấy thông tin nhiệt độ hiện tại được nhập bởi người truy cập. Nếu nhiệt độ nhập vào trên 100, yêu cầu người dùng giảm nhiệt độ. Nếu nhiệt độ dưới 20, yêu cầu người dùng tăng nhiệt độ.
-    let t = +prompt("Nhập nhiệt độ hiện tại");
-    if (t > 100) {
-        alert("Vui lòng giảm nhiệt độ!");
-    } 
-     else if (t < 20) {
-        alert("Vui lòng tăng nhiệt độ!");
-    }
-    else {
-        alert("Nhiệt độ bình thường.")
-    }
+    // Bài 3: Hiển thị ra 20 số trong dãy fibonacci đầu tiên.
+    // Khai báo mảng để lưu dãy Fibonacci
+let fibonacciSeries = [];
+
+// Gán giá trị ban đầu cho hai số đầu tiên trong dãy Fibonacci
+let a = 0;
+let b = 1;
+
+// Hiển thị hai số đầu tiên trong dãy Fibonacci (0 và 1)
+fibonacciSeries.push(a);
+fibonacciSeries.push(b);
+
+// Sử dụng vòng lặp để tính toán và hiển thị các số tiếp theo trong dãy Fibonacci
+for (let i = 2; i < 20; i++) {
+    let nextNumber = a + b;
+    fibonacciSeries.push(nextNumber);
+    a = b;
+    b = nextNumber;
+}
+
+// Hiển thị dãy Fibonacci
+document.write("20 số trong dãy Fibonacci đầu tiên:");
+document.write(fibonacciSeries.join(", "));
     </script>
 </body>
 </html>
