@@ -10,28 +10,32 @@
     // Bài 1: Sử dụng vòng lặp để đếm từ 1 đến 100. Khi số là 99, hiển thị hộp thoại thông báo là đã hoàn thành.
     // Bài 2: Sử dụng hàm prompt() để lấy thông tin nhiệt độ hiện tại được nhập bởi người truy cập. Nếu nhiệt độ nhập vào trên 100, yêu cầu người dùng giảm nhiệt độ. Nếu nhiệt độ dưới 20, yêu cầu người dùng tăng nhiệt độ.
     // Bài 3: Hiển thị ra 20 số trong dãy fibonacci đầu tiên.
-    // Khai báo mảng để lưu dãy Fibonacci
-let fibonacciSeries = [];
-
-// Gán giá trị ban đầu cho hai số đầu tiên trong dãy Fibonacci
-let a = 0;
-let b = 1;
-
-// Hiển thị hai số đầu tiên trong dãy Fibonacci (0 và 1)
-fibonacciSeries.push(a);
-fibonacciSeries.push(b);
-
-// Sử dụng vòng lặp để tính toán và hiển thị các số tiếp theo trong dãy Fibonacci
-for (let i = 2; i < 20; i++) {
-    let nextNumber = a + b;
-    fibonacciSeries.push(nextNumber);
-    a = b;
-    b = nextNumber;
+    // Bài 4: Tìm số đầu tiên trong dãy fibonacci chia hết cho 5
+    // Hàm kiểm tra số chia hết cho 5
+function isDivisibleByFive(number) {
+    return number % 5 === 0;
 }
 
-// Hiển thị dãy Fibonacci
-document.write("20 số trong dãy Fibonacci đầu tiên:");
-document.write(fibonacciSeries.join(", "));
+// Tìm số đầu tiên trong dãy Fibonacci chia hết cho 5
+function findFirstFibonacciDivisibleByFive() {
+    let a = 0;
+    let b = 1;
+    let c = a + b;
+
+    while (true) {
+        if (isDivisibleByFive(c)) {
+            return c;
+        }
+
+        a = b;
+        b = c;
+        c = a + b;
+    }
+}
+
+// Tìm và hiển thị số đầu tiên trong dãy Fibonacci chia hết cho 5
+let firstFibonacciDivisibleByFive = findFirstFibonacciDivisibleByFive();
+document.write("Số đầu tiên trong dãy Fibonacci chia hết cho 5 là:", firstFibonacciDivisibleByFive);
     </script>
 </body>
 </html>
