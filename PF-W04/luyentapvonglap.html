@@ -11,31 +11,26 @@
     // Bài 2: Sử dụng hàm prompt() để lấy thông tin nhiệt độ hiện tại được nhập bởi người truy cập. Nếu nhiệt độ nhập vào trên 100, yêu cầu người dùng giảm nhiệt độ. Nếu nhiệt độ dưới 20, yêu cầu người dùng tăng nhiệt độ.
     // Bài 3: Hiển thị ra 20 số trong dãy fibonacci đầu tiên.
     // Bài 4: Tìm số đầu tiên trong dãy fibonacci chia hết cho 5
-    // Hàm kiểm tra số chia hết cho 5
-function isDivisibleByFive(number) {
-    return number % 5 === 0;
-}
-
-// Tìm số đầu tiên trong dãy Fibonacci chia hết cho 5
-function findFirstFibonacciDivisibleByFive() {
+    // Bài 5: Tính tổng của 20 số đầu tiên trong dãy fibonacci.
+    // Tính tổng của 20 số đầu tiên trong dãy Fibonacci
+function sumOfFirst20FibonacciNumbers() {
+    let sum = 0;
     let a = 0;
     let b = 1;
-    let c = a + b;
 
-    while (true) {
-        if (isDivisibleByFive(c)) {
-            return c;
-        }
-
+    for (let i = 0; i < 20; i++) {
+        sum += a; // Thêm số Fibonacci hiện tại vào tổng
+        let nextFibonacci = a + b;
         a = b;
-        b = c;
-        c = a + b;
+        b = nextFibonacci;
     }
+
+    return sum;
 }
 
-// Tìm và hiển thị số đầu tiên trong dãy Fibonacci chia hết cho 5
-let firstFibonacciDivisibleByFive = findFirstFibonacciDivisibleByFive();
-document.write("Số đầu tiên trong dãy Fibonacci chia hết cho 5 là:", firstFibonacciDivisibleByFive);
+// Tính và hiển thị tổng của 20 số đầu tiên trong dãy Fibonacci
+let sum = sumOfFirst20FibonacciNumbers();
+document.write("Tổng của 20 số đầu tiên trong dãy Fibonacci là:", sum);
     </script>
 </body>
 </html>
