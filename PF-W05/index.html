@@ -1,37 +1,20 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset=utf-8 />
-    <title>JS Bin</title>
-    <style>
-        body {padding-top:50px}
-     </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-
 <body>
-    <input type="text" id="txtValue"/>
-    <input type="button" id="btnAdd" value="Add" onclick="add_element_to_array();"/>
-    <input type="button" id="btnDisplay" value="Display" onclick="display_array();"/>
-    <div id="result"></div>
-</body>
-
-<script>
-    let x = 0;
-    let array = Array();
-    function add_element_to_array() {
-    array[x] = document.getElementById("txtValue").value;
-    alert("Element: " + array[x] + " Added at index " + x);
-    x++;
-    document.getElementById("txtValue ").value = "";
-}
-function display_array() {
-    let e = "<hr/>";
-    for (let i = 0; i < array.length; i++) {
-        e += "Element " + i + " = " + array[i] + "<br/>";
+    <script>
+    // Viết một chương trình JavaScript để tìm một giá tri được nhập vào từ hộp thoại có nằm trong mảng hay không. Nếu có in ra vị trí của phần tử đó.
+    let value = prompt("Enter a number: ");
+    let numbers = [-3,5,1,3,2,10];
+    for (let i = 0; i < numbers.length; i++) {
+        if (value == numbers[i]) {
+            alert("Value " + numbers[i] + "found at " + i);
+        } 
     }
-    document.getElementById("result").innerHTML = e;
-}
-</script>
-
+    </script>
+</body>
 </html>
