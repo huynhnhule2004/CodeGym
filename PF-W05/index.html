@@ -7,40 +7,21 @@
 </head>
 <body>
     <script>
-    //Luyện tập sử dụng thuật toán tìm kiếm để tìm giá trị nhỏ nhất/lớn nhất.
-    
+    //Đảo ngược các phần tử trong mảng
+    let x = [-3, 5, 1, 3, 2, 10];
+    let first = 0;
+    let last = x.length - 1;
 
-    function findMin(arr) {
-        var min = arr[0];
-        for (var i = 1; i < arr.length; ++i) {
-            if (arr[i] < min) {
-                min = arr[i];
-            }
-        }
-        return min;
+    while(first < last) {
+        let b = x[first];
+        x[first] = x[last];
+        x[last] = b;
+        first++;
+        last--;
     }
-    function findMax(arr) {
-    var max = arr[0];
-    for (var i = 1; i < arr.length; ++i) {
-        if (arr[i] > max) {
-            max = arr[i];
-        }
-    }
-    return max;
-    }
-    var nums = [];
-    for(vari=0; i<100; ++i){
-    nums[i] = Math.floor(Math.random() * 101);
-    }
-    var minValue = findMin(nums);
-    dispArr(nums); //Hàm này được lấy từ bài đọc thuật toán tìm kiếm
-    document.write("<br/>");
-    document.write("<br/>");
-    document.write("The minimum value is: " + minValue);
-    var maxValue = findMax(nums);
-    document.write("<br/>");
-    document.write("The maximum value is: " + maxValue);
-    
+    document.write(x);
+
+   
     </script>
 </body>
 </html>
