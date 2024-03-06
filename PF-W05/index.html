@@ -7,10 +7,41 @@
 </head>
 <body>
     <script>
-    //Bài 1
+    //Sử dụng các hàm có sẵn của mảng
+    // Bài 1
     let myColor = ["Red", "Green", "White", "Black"];
-    document.write(myColor);
+    document.write(myColor.join());
+    //Bài 2
+    var num=window.prompt();
+    var str = num.toString();
+    var result = [str[0]];
+    
+    for(var x=1; x<str.length; x++)
+    {
+        if((str[x-1]%2 === 0)&&(str[x]%2 === 0))
+        {
+        result.push('-', str[x]);
+        }
+        else
+        {
+        result.push(str[x]);
+        }
+    }
+    document.write(result.join(''));
+    // Bài 3
+    let inputString = prompt("Nhập vào một chuỗi:");
+    let outputString = "";
 
+    for (let i = 0; i < inputString.length; i++) {
+        let char = inputString.charAt(i);
+        if (char === char.toUpperCase()) {
+            outputString += char.toLowerCase();
+        } else {
+            outputString += char.toUpperCase();
+        }
+    }
+
+    document.write(outputString);
    
     </script>
 </body>
