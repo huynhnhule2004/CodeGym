@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Text on Keydown</title>
+</head>
+<body>
+    <textarea name="" id="fixedText" cols="30" rows="10">
+        
+    </textarea>
+
+    <script>
+        // Dòng chữ cố định bạn muốn hiển thị
+        const fixedText = "Hello, world!";
+        
+        // Vị trí bắt đầu hiển thị của dòng chữ cố định
+        let currentIndex = 0;
+
+        // Lắng nghe sự kiện khi người dùng gõ phím
+        document.addEventListener("keydown", function(event) {
+            // Lấy ký tự hiện tại từ dòng chữ cố định
+            const currentChar = fixedText.charAt(currentIndex);
+            
+            // Hiển thị ký tự hiện tại
+            document.getElementById("fixedText").textContent += currentChar;
+
+            // Tăng chỉ số để lấy ký tự tiếp theo cho lần gõ phím tiếp theo
+            currentIndex = (currentIndex + 1) % fixedText.length;
+
+            // Ngăn người dùng di chuyển con trỏ
+            event.preventDefault();
+        });
+    </script>
+</body>
+</html>
