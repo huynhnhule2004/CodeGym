@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let xyz = [3,34,25,23,2,15];
+        // In ra các phần tử trong mảng
+        // for (let i = 0; i< xyz.length;i++) {
+        //     document.write(xyz[i] + " ");
+        // }
+        // In ra các phần tử chẵn trong mảng
+        // for (let i = 0; i < xyz.length;i++) {
+        //     if (xyz[i] % 2 == 0) {
+        //         document.write(xyz[i] + " ");
+        //     }
+        // }
+        // // In ra các phần tử trong mảng chẵn thì in trong p lẻ thì in trong h3
+        // for (let i = 0; i< xyz.length;i++) {
+        //     if(xyz[i] % 2 == 0 ) {
+        //         document.write('<p>' + xyz[i] + '</p>');
+        //     } if (xyz[i] % 2 != 0) {
+        //         document.write('<h3>' + xyz[i] + "</h3>");
+        //     }
+        // }
+
+        // In ra các phần tử tại vị trí chẵn
+        // for (let i = 0; i < xyz.length;i++ ) {
+        //     if (i % 2 == 0) {
+        //         document.write(xyz[i] + " ");
+        //     }
+        // }
+
+        // In ra tổng của các phần tử > 20 
+        // let tong = 0;
+        // for (let i = 0; i < xyz.length;i++) {
+        //     if (xyz[i] > 20) {
+        //         tong += xyz[i];
+        //     }
+        // }
+        // document.write(tong);
+
+        
+        
+        // In ra trung bình cộng các phần tử chia hết cho 3 trong mang
+        // let sum=0;
+        // count = 0;
+        // for (let i = 0; i< xyz.length;i++) {
+        //     if (xyz[i] % 3 == 0) {
+        //         count++;
+        //         sum += xyz[i];
+        //     }
+        // }
+        // document.write(sum/count);
+
+
+        // Tìm giá trị lớn nhất trong mảng
+        // let A = xyz[0];
+        // for (let i = 0; i< xyz.length;i++) {
+        //     if (A < xyz[i]) {
+        //         A = xyz[i];
+        //     }
+        // }
+        // document.write(A);
+
+
+        // tìm số lớn thứ 2 trong mảng
+
+
+
+        // kiểm tra xem dãy có tăng dần không
+        for (let i = 0; i < xyz.length - 1 ;i++) {
+            if (xyz[i] > xyz[i+1]) {
+                return false;
+            }
+            
+        }
+        return true;
+        if (xyz==true) {
+            document.write("Tang");
+        }
+        else {
+            document.write("Giam");
+        }
+    </script>
+</body>
+</html>
