@@ -7,24 +7,34 @@
 </head>
 <body>
     <script>
-    // Chuyển đổi từ feet sang meters
-        function footToMeter(foot) {
-            return 0.305 * foot;
+    // Phương thức kiểm tra số nguyên tố
+function isPrime(number) {
+    // Số nguyên tố phải lớn hơn 1
+    if (number <= 1) {
+        return false;
+    }
+    // Kiểm tra từ 2 đến căn bậc hai của số đó
+    for (let i = 2; i <= Math.sqrt(number); i++) {
+        if (number % i === 0) {
+            // Nếu số đó chia hết cho một số nào đó từ 2 đến căn bậc hai của nó thì không phải là số nguyên tố
+            return false;
         }
+    }
+    // Nếu không chia hết cho bất kỳ số nào từ 2 đến căn bậc hai của nó thì là số nguyên tố
+    return true;
+}
 
-        // Chuyển đổi từ meters sang feet
-        function meterToFoot(meter) {
-            return 3.279 * meter;
-        }
+// Tìm tất cả các số nguyên tố nhỏ hơn 10000
+const primeNumbers = [];
+for (let i = 2; i < 10000; i++) {
+    if (isPrime(i)) {
+        primeNumbers.push(i);
+    }
+}
 
-        // Ví dụ sử dụng:
-        let feetValue = 10;
-        let metersValue = footToMeter(feetValue);
-        console.log(`${feetValue} feet = ${metersValue} meters`);
+console.log("Các số nguyên tố nhỏ hơn 10000 là:");
+console.log(primeNumbers.join(", "));
 
-        let metersValue2 = 5;
-        let feetValue2 = meterToFoot(metersValue2);
-        console.log(`${metersValue2} meters = ${feetValue2} feet`);
 
     </script>
 </body>
