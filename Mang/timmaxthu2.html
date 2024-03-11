@@ -7,32 +7,23 @@
 </head>
 <body>
     <script>
-        let arr = [5,5,3,4,5,2];
+        let arr = [5,5,3,6,5,2];
         //Tìm max:
-        let max = arr[0];
-        for (let i = 0;i < arr.lenght;i++) {
-            if (arr[i] > max) {
-                max = arr[i];
-            }
-        }
-        let max2 = -999;
-        for (let i =0; i < arr.length; i++) {
-            if (arr[i] > max2 && arr[i] < max) {
-                max2 = arr[i];
-            }
-        }
-        document.write("Max2 là: "+max2 + "<br>");
         // Tìm max thứ 2: 5 5 4 3 1 5 4 2 => 4
         //Nhập vào x, in ra vị trí x có trong mảng(VD:x=4=>3.x=5=>0,1,4)
-        let x = prompt("Nhập x: ");
-        for (let i =0;i<arr.length;i++) {
-            if(arr[i] == x) {
-                document.write(i);
+       
+        //tìm max và vị trí của max 
+        let max = arr[0];
+        let index = 0;
+        for (let i=0;i<arr.length;i++) {
+            if (max < arr[i]) {
+                max = arr[i];
+                index = i;
             }
         }
-
+        document.write(`max là ${max} vị trí ${index}`)
         // Đếm số lần xuất hiện của từng phần tử trong mảng
-
+        // Tính tổng đường chéo chính trong mảng 2 chiều 5*5
     </script>
 </body>
 </html>
