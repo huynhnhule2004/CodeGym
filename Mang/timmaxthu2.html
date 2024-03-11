@@ -7,15 +7,25 @@
 </head>
 <body>
     <script>
-        let arr = [23,12,43,4,5,12];
-        arr[2] = 10;
+        let arr = [5,5,3,4,5,2];
+        //Tìm max:
         let max = arr[0];
         for (let i = 0;i < arr.lenght;i++) {
             if (arr[i] > max) {
-                max = a[i];
+                max = arr[i];
             }
         }
-        document.write("Max là: "+max);
+        let max2 = -999;
+        for (let i =0; i < arr.length; i++) {
+            if (arr[i] > max2 && arr[i] < max) {
+                max2 = arr[i];
+            }
+        }
+        document.write("Max2 là: "+max2);
+        // Tìm max thứ 2: 5 5 4 3 1 5 4 2 => 4
+
+        // Đếm số lần xuất hiện của từng phần tử trong mảng
+
     </script>
 </body>
 </html>
