@@ -21,8 +21,15 @@
                 max2 = arr[i];
             }
         }
-        document.write("Max2 là: "+max2);
+        document.write("Max2 là: "+max2 + "<br>");
         // Tìm max thứ 2: 5 5 4 3 1 5 4 2 => 4
+        //Nhập vào x, in ra vị trí x có trong mảng(VD:x=4=>3.x=5=>0,1,4)
+        let x = prompt("Nhập x: ");
+        for (let i =0;i<arr.length;i++) {
+            if(arr[i] == x) {
+                document.write(i);
+            }
+        }
 
         // Đếm số lần xuất hiện của từng phần tử trong mảng
 
