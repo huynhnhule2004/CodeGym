@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let a = [1,2,3,5];
+        // alert("Trước: " + a);
+        // a.push(10);Thêm phần tử vào cuối mang
+        // a[2]=100;Sửa phần tự tại vị trí 2
+        // a.splice(1,2);Xóa 2 phần tử từ vị trí 1
+        // let b = a.indexOf(5);Tìm chỉ số index có giá trị 5
+        // a.splice(2,0,[10,20,30]);//tại vị trí 2 xóa 0 phần tử và thêm mảng 10 20 30 vào mảng a
+        // alert("Sau " + a);
+
+        //Nhập vào n là số lượng phần tử trong mảng
+        //Nhập vào n phần tử
+        //In ra mỗi phần tử 1 hàng
+        // let n = +prompt("Nhập vào số lượng phần tử");
+        // let arr = [];
+        // for (let i =0;i<n;i++) {
+        //     let x =+prompt("Nhập vào phần tử thứ" + i);
+        //     arr.push(x);
+        // }
+        // for(let i = 0;i<arr.length;i++) {
+        //     document.write(arr[i] + "<br>");
+        // }
+
+
+        // Nhập vào các phần tử của các mảng cho đến khi nhập -1 thì dừng.
+        //In ra mỗi phần tử 1 dòng
+        // let arr =[];
+        // let x;
+        // for (let i = 0 ;x != -1; i++) {
+        //     x = +prompt("Nhập vào phần tử thứ" + i);
+        //     arr.push(x);
+        // }
+        // for(let i = 0; i < arr.length; i++) {
+        //     document.write(arr[i] + "<br>");
+        // }
+        let arr =[];
+        let x;
+        for (let i = 0; ; i++) {
+
+            x = +prompt("Nhập vào phần tử thứ" + i);
+            arr.push(x);
+            if (x == -1) {
+                break;
+            }
+        }
+        for(let i = 0; i < arr.length; i++) {
+            document.write(arr[i] + "<br>");
+        }
+    </script>
+</body>
+</html>

@@ -35,11 +35,7 @@
         //Tính tổng đường chéo phụ: 5, 29,3,15
         let tong1=0;
         for (let i = 0;i<arr.length;i++) {
-            for (let j = 0;j<arr[i].length;j++) {
-                if(i+j == arr.length -1) {
-                    tong1 +=arr[i][j];
-                }
-            }
+            tong1+= arr[i][arr.length-1-i];
         }
         document.write(tong1);
 
