@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //cho 1 mang 2 chieu: có 4 phần tử, mỗi phẩn tử là 1 mảng con có 4 pt
+        //Tính tổng đường chéo chính
+        let arr = [
+            [1,22,3,5],
+            [7,6,29,22],
+            [55,3,9,42],
+            [15,13,19,41]
+        ];
+        let tong = 0;
+        //1+6+9+41
+        for (let i = 0;i<arr.length;i++) {
+            for (let j = 0;j<arr[i].length;j++) {
+                if(i == j) {
+                    tong +=arr[i][j];
+                }
+            }
+        }
+        document.write(tong);
+        //tối ưu
+        // let sum =0;
+        // for(let i=0; i< arr.length; i++){
+        //     sum += arr[i][i];
+        // }
+        // document.write(sum);
+
+        //Tính tổng đường chéo phụ: 5, 29,3,15
+        let tong1=0;
+        for (let i = 0;i<arr.length;i++) {
+            for (let j = 0;j<arr[i].length;j++) {
+                if(i+j == arr.length -1) {
+                    tong1 +=arr[i][j];
+                }
+            }
+        }
+        document.write(tong1);
+
+
+    </script>
+</body>
+</html>
