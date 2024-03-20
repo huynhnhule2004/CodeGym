@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+        // Nhập vào 1 chuỗi, thay thế dấu - thành dấu _
+        //ab-cd-efgh
+        // let str = "ab-cd-efgh ".split("");
+        // for (let i = 0; i < str.length; i++) {
+        //     if (str[i] == "-") {
+        //         str[i] = "_";
+        //     }
+        // }
+        // document.write(str.join(""));
+
+        // Nhập vào n, nhập vào n phần tử của mảng.
+        // 1. Tìm phần tử lớn nhất trong mảng
+        // 2. Đếm số lượng phần tử có giá trị bằng max
+        function findMaxAndCountOccurrences() {
+    // Nhập số lượng phần tử của mảng
+    var n = parseInt(prompt("Nhập số lượng phần tử của mảng:"));
+
+    // Khởi tạo mảng và nhập các phần tử
+    var arr = [];
+    for (var i = 0; i < n; i++) {
+        arr.push(parseInt(prompt("Nhập phần tử thứ " + (i + 1) + ":")));
+    }
+
+    // Tìm phần tử lớn nhất trong mảng
+    var max = arr[0];
+    for (var i = 1; i < n; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+
+    // Đếm số lượng phần tử có giá trị bằng max
+    var count = 0;
+    for (var i = 0; i < n; i++) {
+        if (arr[i] === max) {
+            count++;
+        }
+    }
+
+    // Hiển thị kết quả
+    console.log("Phần tử lớn nhất trong mảng là: " + max);
+    console.log("Số lượng phần tử có giá trị bằng max là: " + count);
+}
+
+// Gọi hàm để thực thi
+findMaxAndCountOccurrences();
+
+
+    </script>
+    </body>
+</html>

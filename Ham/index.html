@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            position: absolute;
+            width: 100px;
+            top: 100px;
+            left: 200px;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://cdn.britannica.com/68/195168-050-BBAE019A/football.jpg" alt="" id="x"
+    style="            position: absolute;
+    width: 100px;
+    top: 100px;
+    left: 200px;"
+    >
+    <button onclick="phai()">Sang phai</button>
+    <button onclick="trai()">Sang trai</button>
+    <button onclick="tren()">Tren</button>
+    <button onclick="duoi()">Duoi</button>
+
+
+
+    <script>
+        function phai() {
+            let xx = document.getElementById('x');
+            xx.style.left = parseInt(xx.style.left ) + 20 + "px";
+        }
+        function trai() {
+            let xx = document.getElementById('x');
+            xx.style.left = parseInt(xx.style.left ) - 20 + "px";
+        }
+        function duoi() {
+            let xx = document.getElementById('x');
+            xx.style.top = parseInt(xx.style.top ) + 20 + "px";
+        }
+        function tren() {
+            let xx = document.getElementById('x');
+            xx.style.top = parseInt(xx.style.top ) - 20 + "px";
+        }
+    </script>
+</body>
+</html>

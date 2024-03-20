@@ -41,19 +41,31 @@
         // for(let i = 0; i < arr.length; i++) {
         //     document.write(arr[i] + "<br>");
         // }
-        let arr =[];
-        let x;
-        for (let i = 0; ; i++) {
+        // let arr =[];
+        // let x;
+        // for (let i = 0; ; i++) {
 
-            x = +prompt("Nhập vào phần tử thứ" + i);
-            arr.push(x);
-            if (x == -1) {
+        //     x = +prompt("Nhập vào phần tử thứ" + i);
+        //     arr.push(x);
+        //     if (x == -1) {
+        //         break;
+        //     }
+        // }
+        // for(let i = 0; i < arr.length; i++) {
+        //     document.write(arr[i] + "<br>");
+        // }
+
+        //BTVN Kiểm tra xem một mảng có chứa tất cả các số từ 1 đến n không.
+        let n = +prompt("Nhập vào n: ");
+        let arr = [2,3,1,2,3,5,6];
+        let check = "Arr chứa toàn bộ các số từ 1->n";
+        for (let i = 1; i <= n; i++) {
+            if (arr.indexOf(i) == -1) {
+                check = "Arr không chứa toàn bộ các số từ 1->n";
                 break;
             }
         }
-        for(let i = 0; i < arr.length; i++) {
-            document.write(arr[i] + "<br>");
-        }
+        document.write(check);
     </script>
 </body>
 </html>
