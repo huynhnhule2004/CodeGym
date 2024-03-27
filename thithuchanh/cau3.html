@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Viết hàm sumOfListPrime() nhận vào một số nguyên x , hàm trả
+        //về giá trị là tổng các số nguyên tố từ 0 cho tới x
+        // Hàm kiểm tra số nguyên tố
+        function isPrime(number) {
+            if (number <= 1) {
+                return false;
+            }
+            for (let i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        // Hàm tính tổng các số nguyên tố từ 0 đến x
+        function sumOfListPrime(x) {
+            let sum = 0;
+            for (let i = 0; i <= x; i++) {
+                if (isPrime(i)) {
+                    sum += i;
+                }
+            }
+            return sum;
+        }
+
+        // Sử dụng hàm sumOfListPrime():
+        const x = 10;
+        const sumOfPrimes = sumOfListPrime(x);
+        console.log("Tổng các số nguyên tố từ 0 đến", x, "là:", sumOfPrimes);
+
+    </script>
+</body>
+
+</html>

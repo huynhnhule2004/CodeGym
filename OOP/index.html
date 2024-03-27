@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // let a = {
+        //     name:"NAL",
+        //     age: 18,
+        //     isPoor: true,
+        //     address: "TB",
+        // };
+        // alert(a["age"]);
+        // alert(a.address);
+
+        // Tạo 2 đối tượng có tên: A, B.Điểm 8,10.xếp hạng:khá,giỏi
+        // let x= {
+        //     name: "A",
+        //     diem: 8,
+        //     xephang: "khá"
+        // }
+        // let y = {
+        //     name: "B",
+        //     diem: 10,
+        //     xephang: "giỏi"
+        // }
+
+        // Lớp là bộ khung để tạo ra các đối tượng có tên các phần tử giống nhau
+        // class Student {
+        //     constructor(x, y, z) {
+        //         this.name = x;
+        //         this.age = y;
+        //         this.score = z;
+        //     }
+        //     f2() {
+        //         alert(this.name + ", "+ this.age+", " + this.score);
+        //     }
+        // }
+        // let s1 = new Student("ABC", 20, 10);
+        // let s2 = new Student("CDEF",20,8);
+        // s1.f2();
+        // s2.f2();
+
+        // Tạo lớp sản phẩm: id,name,price,quantity và hàm getI4() để hiện thông tin của sản phẩm
+        // Tạo ra một đối tượng từ lớp đó
+        class Product {
+            constructor(id,name,price,quantity) {
+                this.id = id;
+                this.name = name;
+                this.price = price;
+                this.quantity = quantity;
+            }
+            getI4() {
+                document.write(`
+                <h3>ID sản phẩm: ${this.id}</h3>;
+                <h3>tên sản phẩm: ${this.name}</h3>;
+                <h3>price sản phẩm: ${this.price}</h3>;
+                <h3>số lượng sản phẩm: ${this.quantity}</h3>;
+
+                `);
+            }
+        }
+        let s1 = new Product(1,"sách",19,19);
+        let s2 = new Product;
+        s1.getI4;
+    </script>
+</body>
+</html>

@@ -18,7 +18,7 @@
         setInterval(() => {
             let xx = document.getElementById('x');
             xx.style.left = parseInt(xx.style.left ) + speedX + "px";
-            xx.style.top = parseInt(xx.style.top ) + speedXY + "px";
+            xx.style.top = parseInt(xx.style.top ) + speedY + "px";
             if (parseInt(xx.style.left ) >= window.innerWidth - 100 ||
                 parseInt(xx.style.left) <= 0) {
                 speedX = -speedX;
@@ -30,6 +30,24 @@
         },1);
         //Neu no cham canh phai thi ngay lap tuc bay ve ben trai de tiep tuc
         //Window.innerWidth
+        window.addEventListener("keydown",(e) => {
+            if (e.key == "a") {
+                speedX = -1;
+                speedY = 0;
+            }
+            if (e.key == "d") {
+                speedX = 1;
+                speedY = 0;
+            }
+            if (e.key == "w") {
+                speedX = 0;
+                speedY = -1;
+            }
+            if (e.key == "s") {
+                speedX = 0;
+                speedY = 1;
+            }
+        })
     </script>
 </body>
 </html>

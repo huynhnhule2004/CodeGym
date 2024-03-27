@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Hãy viết một chương trình để biểu diễn hình chữ nhật, với mô tả
+        // của lớp hình tròn như sau:
+        // Rectangle: Tên lớp
+        // - x: Toạ độ x
+        // - y: Toạ độ y 35-width: chiều dài
+        // - height: chiều rộng
+        // - color: Màu sắc (sử dụng max hex)
+        // + render(canvas): Hiển thị hình chữ nhật trên một canvas
+        // Hãy thực hiện các thao tác theo kịch bản sau:
+        // - Hiển thị hình chữ nhật trên một canvas bằng cách sử dụng phương
+        // thức rende 
+        // Định nghĩa lớp Rectangle
+        class Rectangle {
+            constructor(x, y, width, height, color) {
+                this.x = x;
+                this.y = y;
+                this.width = width;
+                this.height = height;
+                this.color = color;
+            }
+
+            // Phương thức render để vẽ hình chữ nhật trên canvas
+            render(canvas) {
+                canvas.fillStyle = this.color;
+                canvas.fillRect(this.x, this.y, this.width, this.height);
+            }
+        }
+
+        // Hàm main để thực hiện các thao tác theo kịch bản
+        function main() {
+            // Lấy canvas từ DOM
+            const canvas = document.getElementById('myCanvas');
+            const ctx = canvas.getContext('2d');
+
+            // Tạo một hình chữ nhật mới
+            const rectangle = new Rectangle(50, 50, 100, 80, '#ff0000'); // Ví dụ với toạ độ và kích thước cụ thể
+
+            // Hiển thị hình chữ nhật trên canvas
+            rectangle.render(ctx);
+        }
+
+        // Gọi hàm main khi trang được tải hoàn tất
+        window.onload = main;
+
+
+    </script>
+</body>
+
+</html>
