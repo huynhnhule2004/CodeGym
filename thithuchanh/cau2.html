@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        function insertNumberToArray(arr,num,index) {
+        //Viết hàm insertNumberToArray() nhận vào một mảng các số
+        //nguyên, một số nguyên x, và một số nguyên vị trí index. Hàm trả
+        //về mảng ban đầu nếu vị trí index có giá trị nhỏ hơn 0 hoặc lớn
+        //hơn chiều dài mảng. Nếu không thì trả về mảng mới đã được
+        //thêm số x vào vị trí index.
+        function insertNumberToArray(arr, num, index) {
             if (index < 0 || index > arr.length) {
                 return arr;
             }
             const newArr = [...arr];
-            newArr.splice(index,0,num);
+            newArr.splice(index, 0, num);
             return newArr;
         }
-        const array = [1,2,3,4,5];
-        const x =10;
+        const array = [1, 2, 3, 4, 5];
+        const x = 10;
         const position = 2;
-        const newArray = insertNumberToArray(array,x,position);
-        document.write("Mang moi la:",newArray);
+        const newArray = insertNumberToArray(array, x, position);
+        document.write("Mang moi la:", newArray);
     </script>
 </body>
+
 </html>

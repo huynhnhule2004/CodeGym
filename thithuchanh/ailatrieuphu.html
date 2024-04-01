@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Millionaire Game AI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #question {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        #answers {
+            display: inline-block;
+            text-align: left;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="question"></div>
+    <div id="answers"></div>
+    <button onclick="answerQuestion()">Next Question</button>
+
+    <script>
+        class Question {
+            constructor(question, answers, correctAnswer) {
+                this.question = question;
+                this.answers = answers;
+                this.correctAnswer = correctAnswer;
+            }
+        }
+
+        class MillionaireGameAI {
+            constructor(questions) {
+                this.questions = questions;
+                this.moneyWon = 0;
+                this.currentQuestionIndex = 0;
+            }
+
+            displayQuestion() {
+                const questionElement = document.getElementById('question');
+                const answersElement = document.getElementById('answers');
+                const question = this.questions[this.currentQuestionIndex];
+                
+                questionElement.textContent = question.question;
+                answersElement.innerHTML = '';
+
+                question.answers.forEach((answer, index) => {
+                    const button = document.createElement('button');
+                    button.textContent = answer;
+                    button.onclick = () => this.answerQuestion(index);
+                    answersElement.appendChild(button);
+                });
+            }
+
+            startGame() {
+                this.displayQuestion();
+            }
+
+            answerQuestion(choice) {
+                const question = this.questions[this.currentQuestionIndex];
+                if (question.answers[choice] === question.correctAnswer) {
+                    alert("Correct!");
+                    this.moneyWon += 1000000;
+                } else {
+                    alert("Incorrect! Game over.");
+                    return;
+                }
+                this.currentQuestionIndex++;
+                if (this.currentQuestionIndex < this.questions.length) {
+                    this.displayQuestion();
+                } else {
+                    alert(`Congratulations! You won $${this.moneyWon}!`);
+                }
+            }
+        }
+
+        const questions = [
+            new Question("What is the capital of France?", ["Paris", "Berlin", "Madrid", "London"], "Paris"),
+            new Question("Who wrote 'Romeo and Juliet'?", ["William Shakespeare", "Charles Dickens", "Jane Austen", "Leo Tolstoy"], "William Shakespeare"),
+            new Question("What is the chemical symbol for water?", ["H2O", "CO2", "NaCl", "O2"], "H2O"),
+            new Question("What is the tallest mountain in the world?", ["Mount Everest", "K2", "Kangchenjunga", "Lhotse"], "Mount Everest")
+        ];
+
+        const game = new MillionaireGameAI(questions);
+        game.startGame();
+    </script>
+</body>
+</html>
