@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+</style>
+<body>
+    <div style="display: flex;">
+        <div id="main" style="width: 80%; height: 500px; background-color: aqua;"><h1>Ai là triệu phú</h1></div>
+        <div style="height: 500px; width: 20%;">
+           <div id="clock" style="width: 50px; height: 50px; border: 1px black inset;"></div>
+          <table><tr><td>Điểm của bạn là:</td><td id="point"></td></tr></table>
+          <button onclick="next()">NEXT</button>
+       </div>
+      </div>
+       <script>
+           let a = 0;
+           let  point = 1;
+             function dung() {
+               alert('Đáp án của bạn đã Đúng và bạn được cộng điểm');
+               document.getElementById('point').innerHTML = point++;
+             }
+             function sai() {
+               alert('Đáp án của bạn đã Sai và trò chơi kết thúc !');
+             }
+
+            function next() {
+                a++;
+                console.log(a);
+                cauhoi(a);
+            }
+
+            function cauhoi(a) {
+   
+                 if (a == 1) {
+                    clock();
+                   let str = "Câu hỏi số 1: Quang học là nghiên cứu về cái gì?";
+                   str += "<table><tr><td><button onclick='dung()'>A. Ánh sáng<button><td><td><button onclick='sai()'>B. Ánh trăng lừa rối<button><td><tr><tr><td><button onclick='sai()'>C. Không có đáp án<button><td><td><button onclick='sai()'>D. Con người chưa đạt đến đó<button><td><tr><table>";
+                   document.getElementById('main').innerHTML = str;
+                }
+   
+                if (a == 2) {
+                   let str = "Câu hỏi số 2: DNA có nghĩa là gì?";
+                   str += "<table><tr><td><button onclick='sai()'>A. Sợi mì tôm<button><td><td><button onclick='dung()'>B. Axit deoxyribonucleic<button><td><tr><tr><td><button onclick='sai()'>C. Axit Clohidrick<button><td><td><button onclick='sai()'>D. Axit Sunfuric<button><td><tr><table>";
+                   document.getElementById('main').innerHTML = str;
+                }
+   
+                if (a == 3) {
+                    let str = "Câu hỏi số 3: Sứ mệnh nào trên mặt trăng của Apollo là người đầu tiên mang theo máy bay thám hiểm mặt trăng?";
+                    str += "<table><tr><td><button onclick='dung()'>A. Sứ mệnh Apollo 15<button><td><td><button onclick='sai()'>B. Sứ mệnh Apollo 155<button><td><tr><tr><td><button onclick='sai()'>C. Sứ mệnh Apollo 1<button><td><td><button onclick='sai()'>D. Sứ mệnh Apollo 5<button><td><tr><table>";
+                    document.getElementById('main').innerHTML = str;
+                }
+   
+                if (a == 4) {
+                    let str = "Câu hỏi số 4: Tên của vệ tinh nhân tạo đầu tiên do Liên Xô phóng vào năm 1957 là gì?";
+                    str += "<table><tr><td><button onclick='sai()'>A. Thần châu<button><td><td><button onclick='sai()'>B. Thần Ánh Trăng<button><td><tr><tr><td><button onclick='sai()'>C. Hikari<button><td><td><button onclick='dung()'>D. Sputnik 1<button><td><tr><table>";
+                    document.getElementById('main').innerHTML = str;
+                }
+   
+               if (a == 5) {
+                    let str = "Câu hỏi số 5: Nhóm máu hiếm nhất là gì?";
+                    str += "<table><tr><td><button onclick='dung()'>A. AB Phủ định<button><td><td><button onclick='sai()'>B. AB<button><td><tr><tr><td><button onclick='sai()'>C. CA<button><td><td><button onclick='sai()'>D. Máu Vamprie<button><td><tr><table>";
+                    document.getElementById('main').innerHTML = str;
+                }
+   
+                if (a == 6) {
+                    let str = "Câu hỏi số 6: Trái đất có ba lớp khác nhau do nhiệt độ thay đổi. Ba lớp của nó là gì?";
+                    str += "<table><tr><td><button onclick='sai()'>A. Lớp vỏ, lớp áo và dung nham<button><td><td><button onclick='sai()'>B. Lớp vỏ, lớp đá và lõi<button><td><tr><tr><td><button onclick='sai()'>C. Lớp đất, lớp áo và lõi<button><td><td><button onclick='dung()'>D. Lớp vỏ, lớp áo và lõi<button><td><tr><table>";
+                    document.getElementById('main').innerHTML = str;
+               }
+                
+                if (a == 7) {
+                    let str = "Câu hỏi số 7: Ếch thuộc nhóm động vật nào?";
+                    str += "<table><tr><td><button onclick='sai()'>A. Động vật đẻ con<button><td><td><button onclick='dung()'>B. Động vật lưỡng cư<button><td><tr><tr><td><button onclick='sai()'>C. Đông vật thú nhún<button><td><td><button onclick='sai()'>D. Động vật ăn tạp<button><td><tr><table>";
+                    document.getElementById('main').innerHTML = str;
+                }
+   
+             
+                if (a == 8) {
+                    let str = "Câu hỏi số 8: Cơ thể cá mập có bao nhiêu xương?";
+                    str += "<table><tr><td><button onclick='dung()'>A. 0 <button><td><td><button onclick='sai()'>B. 10<button><td><tr><tr><td><button onclick='sai()'>C. 12<button><td><td><button onclick='sai()'>D. 1<button><td><tr><table>";
+                    document.getElementById('main').innerHTML = str;
+                }
+   
+             
+                if (a == 9) {
+                    let str = "Câu hỏi số 9: Các xương nhỏ nhất trong cơ thể nằm ở đâu?";
+                    str += "<table><tr><td><button onclick='sai()'>A. Ngón chân <button><td><td><button onclick='dung()'>B. ngón tay út<button><td><tr><tr><td><button onclick='dung()'>C. Tai<button><td><td><button onclick='sai()'>D. Mũi<button><td><tr><table>";
+                    document.getElementById('main').innerHTML = str;
+                }
+   
+                if (a == 10) {
+                   let str = "Câu hỏi số 10: Một con bạch tuộc có bao nhiêu trái tim?";
+                   str += "<table><tr><td><button onclick='sai()'>A. 2 Tim định<button><td><td><button onclick='dung()'>B. Ba chậu<button><td><tr><tr><td><button onclick='sai()'>C. 1 TIm<button><td><td><button onclick='sai()'>D. 4 Tim<button><td><tr><table>";
+                   document.getElementById('main').innerHTML = str;
+                }
+
+                if (a == 11) {
+                    alert('Bạn đã hoàn thành trò chơi !!!');
+                }
+            }
+
+            function clock() {
+                    let c = 30;
+                    setInterval(() => {
+                        console.log(c);
+                        document.getElementById('clock').innerHTML = c;
+                        c--;
+                        if (c < 0) {alert('Hết thời gian trả lời bạn đã thua !!!')}
+                    }, 1000);
+                }
+       </script>
+</body>
+</html>
