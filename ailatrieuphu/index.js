@@ -237,7 +237,7 @@ function question() {
                 document.getElementById("check").innerHTML = "";
                 let win = `<div class="win">
         <h3 class="p-4 ">Xin chúc mừng. Bạn đã chiến thắng!</h3>
-        <h4 class="p-4 ">Giải thưởng của bạn là $3000</h4>
+        <h4 class="p-4 ">Giải thưởng của bạn là $${money}</h4>
     </div>`
                 document.getElementById('win').innerHTML = win;
                 document.getElementById("question").style.display = "none";
