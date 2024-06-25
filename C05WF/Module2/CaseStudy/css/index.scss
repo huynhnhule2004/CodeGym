@@ -1,0 +1,1392 @@
+@import "variables";
+@import "mixin";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+
+
+    header {
+        width: 100%;
+
+        a:hover {
+            opacity: 0.8;
+        }
+
+        .header {
+            width: 70%;
+            margin: auto;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .bars {
+                display: none;
+            }
+
+            .tel {
+                width: calc(100% / 3);
+
+                a {
+                    text-decoration: none;
+
+                    .radius {
+                        background-color: $blue_color;
+                        border-radius: 50%;
+                        padding: 8px;
+
+                        i {
+                            color: $white_color;
+                        }
+                    }
+
+                    .phone-number {
+                        color: $blue_color;
+                        margin-left: 10px;
+                        font-weight: bold;
+                        font-size: large;
+                    }
+                }
+            }
+
+            .logo {
+                width: calc(100% / 3);
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .search-accout-cart {
+                width: calc(100% / 3);
+                text-align: right;
+
+                a {
+                    text-decoration: none;
+                    color: $blue_color;
+                    font-size: x-large;
+                    margin: 10px;
+                }
+            }
+        }
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    nav {
+        box-shadow: 0px 0px 5px #eee;
+        width: 100%;
+        background-color: $white_color;
+        position: sticky !important;
+        top: 0;
+
+        a {
+            display: block;
+            text-decoration: none;
+            color: $black_color;
+        }
+
+        a:hover {
+            color: $blue_color;
+        }
+
+        .menu {
+            list-style: none;
+            width: 50%;
+            margin: auto;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            li {
+                display: inline-block;
+                position: relative;
+                padding: 16px 0;
+            }
+
+            li:hover .sub-menu {
+                display: block;
+            }
+
+            .sub-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                background-color: $white_color;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.09);
+                z-index: 1;
+
+                li {
+                    display: block;
+                    padding: 10px 30px 10px 10px;
+                }
+            }
+
+            li:hover.sub-menu {
+                display: block;
+            }
+        }
+    }
+
+    .banner {
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .content {
+        width: 100%;
+        padding: 20px 0;
+
+        h1 {
+            text-align: center;
+            padding-bottom: 50px;
+        }
+
+        .row {
+            width: 80%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin: auto;
+
+            .col-3 {
+                width: calc(100% / 4 - 20px);
+                margin-bottom: 20px;
+
+                .container-col {
+                    width: 100%;
+                    box-shadow: 0 0 20px #ccc;
+                    position: relative;
+
+                    .discount {
+                        position: absolute;
+                        display: inline-block;
+                        top: 0;
+                        right: 0;
+                        padding: 15px;
+
+                        span {
+                            border-radius: 50%;
+                            background-color: red;
+                            color: $white_color;
+                            padding: 5px 3px;
+                        }
+                    }
+
+                    img {
+                        width: 100%;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: $black_color;
+
+                        h3 {
+                            margin: 10px 0 20px 5px;
+                        }
+                    }
+
+                    p {
+                        margin: 0 0 10px 5px;
+                        color: $gray_color;
+                    }
+
+                    .rate {
+                        margin-left: 5px;
+                        width: 100%;
+                        color: $yellow_color;
+                        font-size: small;
+                    }
+
+                    hr {
+                        border: none;
+                        height: 1px;
+                        background-color: #ccc;
+                    }
+
+                    .price {
+                        width: 100%;
+                        padding: 10px 0;
+                        font-size: large;
+
+                        .price-real {
+                            color: $red_color;
+                            margin-left: 5px;
+                        }
+
+                        .price-del {
+                            float: right;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+
+                .container-col:hover {
+                    box-shadow: 0 0 10px #ccc;
+                }
+
+            }
+
+
+        }
+
+        .service {
+            align-items: baseline;
+
+            .box-content-service {
+                width: calc(100% / 4 - 10px);
+                margin-bottom: 20px;
+                text-align: center;
+
+                i {
+                    font-size: 30px;
+                    color: $blue_color;
+                    margin-bottom: 20px;
+                }
+
+                h3 {
+                    font-weight: 400;
+                    color: rgb(51, 51, 51);
+                    padding-bottom: 10px;
+                }
+
+                p {
+                    color: rgb(120, 120, 120);
+                    font-weight: 400;
+                }
+            }
+        }
+
+        .title {
+            padding: 20px 0;
+            margin-bottom: 20px;
+
+            .line {
+                width: 35%;
+            }
+
+            .slogan {
+                text-align: center;
+                width: 30%;
+
+                h1 {
+                    width: 100%;
+                    padding-bottom: 10px;
+                    color: rgb(51, 51, 51);
+                }
+
+                h3 {
+                    width: 100%;
+                    color: rgb(156, 156, 156);
+                }
+            }
+
+        }
+
+        .time-sale {
+
+            text-align: center;
+
+            .time {
+                width: 30%;
+                margin: auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .item {
+                    width: calc(100% / 4 - 10px);
+
+                    span {
+                        background-color: $blue_color;
+                        font-size: larger;
+                        color: $white_color;
+                        padding: 10px;
+                        border-radius: 5px;
+                    }
+
+                    p {
+                        padding: 20px 0;
+                        font-style: italic;
+                        color: rgb(51, 51, 51);
+                    }
+                }
+            }
+        }
+
+        .btn {
+            padding: 20px 0;
+
+            button {
+                margin: auto;
+                padding: 12px 35px;
+                border: none;
+                border-radius: 30px;
+                background-color: $blue_color;
+                color: white;
+                font-size: large;
+            }
+        }
+
+        .brand {
+            width: 80%;
+            justify-content: flex-start !important;
+
+            img {
+                width: 150px;
+            }
+        }
+
+        .category {
+
+            .item {
+                width: calc(100% / 3 - 10px);
+                margin-bottom: 10px;
+            }
+            a {
+
+                img {
+                    width: 100%;
+                }
+                img:hover {
+                    box-shadow: 0px 5px 5px #989797;
+                    transform: translate(0px, -3px);
+                }
+            }
+
+        }
+    }
+
+    footer {
+        width: 100%;
+        background-color: $footer_color;
+        color: $white_color;
+
+        .footer-content {
+            display: flex;
+            width: 85%;
+            margin: auto;
+            justify-content: space-between;
+            padding: 50px;
+
+            h3 {
+                margin-bottom: 15px;
+            }
+
+            p {
+                margin: 15px 0;
+                font-size: large;
+                color: #afb0b1;
+            }
+
+            a {
+                text-decoration: none;
+                color: #afb0b1;
+            }
+
+            a:hover {
+                color: #e0e2e2;
+            }
+
+            .contact {
+                width: calc(100% / 4);
+            }
+
+            .support {
+                width: calc(100% / 4);
+            }
+
+            .link {
+                width: calc(100% / 4);
+
+                i {
+                    font-size: x-large;
+                }
+            }
+
+            .fanpage {
+                width: calc(100% / 4);
+            }
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #252e3a;
+            line-height: 50px;
+        }
+    }
+}
+
+/*Start trang giới thiệu */
+.content-about {
+    width: 80%;
+    margin: auto;
+
+    a {
+        text-decoration: none;
+        color: $black_color;
+    }
+
+    h2 {
+        margin: 20px 0;
+    }
+
+    p {
+        margin-bottom: 20px;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+/* End trang giới thiệu */
+
+
+/* Start trang liên hệ */
+.content-contact {
+
+    width: 80%;
+    margin: auto;
+
+    a {
+        text-decoration: none;
+        color: $black_color;
+    }
+
+    h2 {
+        margin: 20px 0;
+    }
+
+    iframe {
+        width: 100%;
+    }
+
+    .contact-info {
+        display: flex;
+        width: 100%;
+
+        h3 {
+            margin-bottom: 10px;
+        }
+
+        .form-contact {
+            width: 50%;
+
+            .form {
+                display: flex;
+                flex-wrap: nowrap;
+
+                .input-info {
+                    width: 50%;
+
+                    input {
+                        width: 90%;
+                        margin-bottom: 10px;
+                        line-height: 25px;
+                        border: 1px solid #ccc;
+                        box-shadow: 0 0 5px #ccc;
+                        padding-left: 5px;
+                    }
+                }
+
+                .input-mes {
+                    width: 50%;
+
+                    textarea {
+                        width: 90%;
+                        height: 90%;
+                        border: 1px solid #ccc;
+                        box-shadow: 0 0 5px #ccc;
+                    }
+                }
+            }
+
+            .btn {
+                width: 30%;
+                margin: auto;
+
+                button {
+                    width: 100%;
+                    line-height: 30px;
+                    background-color: #333333;
+                    color: $white_color;
+                    border: none;
+                }
+            }
+        }
+
+        .info {
+            width: 50%;
+
+            .mb {
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+
+/* End trang liên hệ */
+
+
+/* Start trang Blog*/
+.content-blog {
+    width: 80%;
+    margin: auto;
+
+    a {
+        text-decoration: none;
+        color: $black_color;
+    }
+
+    main {
+        width: 100%;
+        display: flex;
+        margin-top: 20px;
+
+        article {
+            width: 70%;
+
+            .title {
+                width: 90%;
+                padding: 10px 10px;
+                background-color: #E7E7E7;
+            }
+
+            .item {
+                width: 50%;
+                margin-top: 20px;
+                box-shadow: 0px 3px 14px rgba(0, 0, 0, 0.15);
+                text-align: justify;
+
+                img {
+                    width: 80%;
+                    margin-left: 10%;
+                }
+
+                h3 {
+                    margin-left: 5%;
+                    color: $blue_color;
+                    margin-bottom: 20px;
+                }
+
+                i {
+                    margin-left: 5%;
+                    color: $gray_color;
+                }
+
+                p {
+                    margin: 10px 20px;
+                }
+
+                .btn {
+                    text-align: right;
+
+                    button {
+                        padding: 5px 0;
+                        width: 100px;
+                        margin: 10px;
+                        border: none;
+                        background-color: $blue_color;
+                        color: $white_color ;
+
+                        i {
+                            color: $white_color !important;
+                            margin: 0;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        aside {
+            width: 30%;
+
+            .title {
+                width: 100%;
+                padding: 10px 10px;
+                background-color: #E7E7E7;
+
+            }
+
+            .blog-item {
+
+                display: flex;
+                border: 1px solid #CCC;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+
+                .img {
+                    width: 30%;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .text {
+                    width: 70%;
+                    margin-left: 10px;
+
+                    p {
+                        color: $blue_color;
+                    }
+                }
+            }
+
+            img {
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            img:hover {
+                box-shadow: 0px 5px 5px #989797;
+                transform: translate(0px, -3px);
+            }
+        }
+    }
+
+
+}
+
+/* End trang Blog*/
+
+
+/* Start trang đăng nhập */
+.content-user {
+    width: 80%;
+    margin: auto;
+
+    a {
+        text-decoration: none;
+        color: $black_color;
+    }
+
+    .user {
+        width: 30%;
+        margin: auto;
+        margin-top: 20px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.09);
+
+        h3 {
+            margin: 10px 20px;
+            font-size: xx-large;
+        }
+
+        form {
+            padding: 10px;
+        }
+
+        .form-control {
+            display: block;
+            margin: auto;
+            width: 90%;
+            margin-bottom: 10px;
+            padding: 10px 5px;
+            border: 1px solid #ccc;
+        }
+
+        .form-control:focus {
+            outline: none;
+            box-shadow: 0 0 5px $blue_color;
+        }
+
+        p {
+            color: $black_color;
+
+            a {
+                color: $blue_color;
+                text-decoration: none;
+            }
+        }
+
+        .btn {
+            background-color: $footer_color;
+            color: $white_color;
+            margin-top: 15px;
+            display: block;
+            margin: auto;
+            width: 90%;
+            margin-bottom: 10px;
+            padding: 10px 5px;
+            border: none;
+        }
+
+        .btn:hover {
+            background-color: $red_color;
+        }
+    }
+}
+
+
+/* End trang đăng nhập */
+
+
+
+/* CSS cho thiết bị di động */
+
+@media screen and (max-width: 767px) {
+
+
+    .container {
+        header {
+            position: sticky !important;
+            top: 0;
+            background-color: $white_color;
+
+            .header {
+                width: 90%;
+                margin: auto;
+                height: 100px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .bars {
+                    display: block;
+                    width: 10%;
+
+                    .fa-bars {
+                        font-size: x-large;
+                    }
+
+                }
+
+                .tel {
+                    display: none;
+
+                }
+
+                .logo {
+                    width: 70%;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .search-accout-cart {
+                    width: 20%;
+                    display: flex;
+
+                    .fa-user {
+                        display: none;
+                    }
+
+                    a {
+                        font-size: x-large;
+                        margin: 5px;
+                    }
+                }
+            }
+        }
+
+        #main {
+            transition: margin-left .2s;
+            padding: 16px;
+            overflow: hidden;
+        }
+
+        nav {
+            display: none;
+        }
+
+        .sidebar {
+            display: block;
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #31373D;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+
+            a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: large;
+                color: $white_color;
+                display: block;
+                transition: 0.3s;
+            }
+
+            a:hover {
+                color: #f1f1f1;
+            }
+
+            .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+            }
+        }
+
+
+        .content {
+            width: 100%;
+            padding: 50px 0;
+
+            h1 {
+                text-align: center;
+                padding-bottom: 50px;
+            }
+
+            .row {
+                width: 90% !important;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                margin: auto;
+
+                .col-3 {
+                    width: calc(100% / 2 - 10px) !important;
+                    margin-bottom: 20px;
+
+                    .container-col {
+                        width: 100%;
+                        box-shadow: 0 0 20px #ccc;
+
+                        .discount {
+                            padding: 10px;
+                        }
+
+                        img {
+                            width: 100%;
+                        }
+
+                        a {
+                            text-decoration: none;
+                            color: $black_color;
+
+                            h3 {
+                                margin: 10px 0 20px 5px;
+                            }
+                        }
+
+                        p {
+                            margin: 0 0 10px 5px;
+                            color: $gray_color;
+                        }
+
+                        .rate {
+                            margin-left: 5px;
+                            width: 100%;
+                            color: $yellow_color;
+                            font-size: small;
+                        }
+
+                        hr {
+                            border: none;
+                            height: 1px;
+                            background-color: #ccc;
+                        }
+
+                        .price {
+                            width: 100%;
+                            padding: 10px 0;
+                            font-size: large;
+
+                            .price-real {
+                                color: $red_color;
+                                margin-left: 5px;
+                            }
+
+                            .price-del {
+                                float: right;
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+
+                    .container-col:hover {
+                        box-shadow: 0 0 10px #ccc;
+                    }
+
+                }
+            }
+
+            .service {
+                .box-content-service {
+                    width: 100%;
+                }
+            }
+
+            .brand {
+                img {
+                    width: 100px;
+                }
+            }
+
+            .title {
+
+                .line {
+                    width: 20% !important;
+                }
+
+                .slogan {
+                    text-align: center;
+                    width: 60% !important;
+
+
+
+                }
+
+            }
+
+            .time-sale {
+
+                .time {
+                    width: 50% !important;
+
+                }
+            }
+
+            .category {
+
+                .item {
+                    width: calc(100% / 2 - 10px);
+                }
+            }
+        }
+
+        footer {
+
+            .footer-content {
+
+                width: 100%;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                .contact {
+                    width: 100% !important;
+                    margin-bottom: 10px;
+                }
+
+                .support {
+                    width: 100% !important;
+
+                    margin-bottom: 10px;
+
+                }
+
+                .link {
+                    width: 100% !important;
+                    margin-bottom: 10px;
+
+                }
+
+                .fanpage {
+                    width: 100% !important;
+
+                    iframe {
+                        width: 100%;
+                    }
+                }
+            }
+
+        }
+    }
+
+    /* Start trang giới thiệu */
+    .content-about {
+        width: 90% !important;
+    }
+
+    /* End trang giới thiệu */
+
+
+    /* Start trang liên hệ */
+    .content-contact {
+
+        iframe {
+            height: 300px;
+        }
+
+        .contact-info {
+
+            h3 {
+                margin-bottom: 10px;
+            }
+
+            .form-contact {
+                width: 100%;
+
+                .form {
+                    flex-wrap: wrap;
+
+                    .input-info {
+                        width: 100%;
+                    }
+
+                    .input-mes {
+                        width: 100%;
+
+                        textarea {
+                            height: 200px;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+
+            }
+
+        }
+    }
+
+    /* End trang liên hệ */
+
+
+
+    /* Start trang Blog */
+    .content-blog {
+        width: 90%;
+
+
+        main {
+
+            article {
+                width: 100%;
+
+                .title {
+                    width: 100%;
+                }
+
+                .item {
+                    width: 100%;
+                }
+            }
+
+            aside {
+                width: 100% !important;
+
+                .title {
+                    width: 100% !important;
+
+                }
+
+                .blog-item {
+                    width: 100% !important;
+
+                }
+
+                img {
+                    width: 100% !important;
+                    margin-top: 10px;
+                }
+
+                img:hover {
+                    box-shadow: 0px 5px 5px #989797;
+                    transform: translate(0px, -3px);
+                }
+            }
+        }
+
+
+    }
+
+    /* End trang Blog */
+
+
+
+    /* Start trang đăng nhập */
+
+    .content-user {
+        width: 95% !important;
+
+        .user {
+            width: 100% !important;
+
+            form {
+                padding: 20px !important
+            }
+        }
+    }
+
+    /* End trang đăng nhập */
+
+}
+
+
+/* CSS cho máy tính bảng */
+
+@media screen and (max-width:1024px) {
+    .container {
+        header {
+            width: 100%;
+
+            .header {
+                width: 90%;
+
+            }
+        }
+
+
+        nav {
+            box-shadow: 0px 0px 5px #eee;
+            width: 100%;
+            background-color: $white_color;
+            position: sticky !important;
+            top: 0;
+
+            a {
+                display: block;
+                text-decoration: none;
+                color: $black_color;
+            }
+
+            a:hover {
+                color: $blue_color;
+            }
+
+            .menu {
+                width: 95%;
+
+            }
+        }
+
+        .content {
+            width: 100%;
+            padding: 20px 0;
+
+            h1 {
+                text-align: center;
+                padding-bottom: 50px;
+            }
+
+            .row {
+                width: 95%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                margin: auto;
+
+                .col-3 {
+                    width: calc(100% / 3 - 10px);
+                    margin-bottom: 20px;
+
+                    .discount {
+                        padding: 12px !important;
+                    }
+
+                    .container-col {
+                        width: 100%;
+                        box-shadow: 0 0 20px #ccc;
+
+                    }
+
+
+                }
+            }
+
+            .service {
+                align-items: baseline;
+            }
+
+            .title {
+
+                .line {
+                    width: 30%;
+                }
+
+                .slogan {
+                    text-align: center;
+                    width: 40%;
+
+                }
+
+            }
+
+            .time-sale {
+
+                .time {
+                    width: 40%;
+
+                }
+            }
+        }
+
+        footer {
+            width: 100%;
+
+            .footer-content {
+                width: 100%;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+
+                .contact {
+                    width: calc(100% / 2);
+                }
+
+                .support {
+                    width: calc(100% / 2);
+                }
+
+                .link {
+                    width: calc(100% / 2);
+
+                    i {
+                        font-size: x-large;
+                    }
+
+                    i:first-child {
+                        margin-right: 10px;
+                    }
+                }
+
+                .fanpage {
+                    width: calc(100% / 2);
+
+                    iframe {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Start trang giới thiệu */
+    .content-about {
+        width: 90%;
+    }
+
+    /* End trang giới thiệu */
+
+
+
+    /* Start trang liên hệ */
+
+    .content-contact {
+
+        width: 90%;
+
+        h2 {
+            margin: 20px 0;
+        }
+
+        iframe {
+            width: 100%;
+        }
+
+        .contact-info {
+            flex-wrap: wrap;
+            width: 100%;
+
+
+            .form-contact {
+                width: 100%;
+
+                .btn {
+                    margin-bottom: 10px;
+                }
+            }
+
+            .info {
+                width: 100%;
+
+                .mb {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+
+    /* End trang liên hệ*/
+
+
+
+    /* Start trang Blog */
+    .content-blog {
+        width: 90%;
+
+        main {
+            flex-wrap: wrap;
+
+            article {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            aside {
+                width: 100%;
+
+                .title {
+                    width: 90%;
+
+                }
+
+                .blog-item {
+                    width: 90%;
+
+
+                    .text {
+                        font-size: large;
+
+                        p {
+                            font-size: larger;
+                        }
+                    }
+                }
+
+                .img-center {
+                    text-align: center;
+
+                    img {
+                        width: 50%;
+                        margin-top: 10px;
+                    }
+
+                    img:hover {
+                        box-shadow: 0px 5px 5px #989797;
+                        transform: translate(0px, -3px);
+                    }
+                }
+
+            }
+        }
+
+
+    }
+
+    /* End trang Blog */
+
+
+
+    /* Start trang đăng nhập */
+
+    .content-user {
+        min-height: 350px;
+
+        .user {
+            width: 80%;
+
+            form {
+                padding: 30px;
+            }
+        }
+    }
+
+    /* End trang đăng nhập */
+
+}

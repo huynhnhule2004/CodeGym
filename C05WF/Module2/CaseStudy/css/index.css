@@ -1,0 +1,1022 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container header {
+  width: 100%;
+}
+.container header a:hover {
+  opacity: 0.8;
+}
+.container header .header {
+  width: 70%;
+  margin: auto;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container header .header .bars {
+  display: none;
+}
+.container header .header .tel {
+  width: 33.3333333333%;
+}
+.container header .header .tel a {
+  text-decoration: none;
+}
+.container header .header .tel a .radius {
+  background-color: #5EC9FF;
+  border-radius: 50%;
+  padding: 8px;
+}
+.container header .header .tel a .radius i {
+  color: #FFFFFF;
+}
+.container header .header .tel a .phone-number {
+  color: #5EC9FF;
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: large;
+}
+.container header .header .logo {
+  width: 33.3333333333%;
+}
+.container header .header .logo img {
+  width: 100%;
+}
+.container header .header .search-accout-cart {
+  width: 33.3333333333%;
+  text-align: right;
+}
+.container header .header .search-accout-cart a {
+  text-decoration: none;
+  color: #5EC9FF;
+  font-size: x-large;
+  margin: 10px;
+}
+.container .sidebar {
+  display: none;
+}
+.container nav {
+  box-shadow: 0px 0px 5px #eee;
+  width: 100%;
+  background-color: #FFFFFF;
+  position: sticky !important;
+  top: 0;
+}
+.container nav a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+.container nav a:hover {
+  color: #5EC9FF;
+}
+.container nav .menu {
+  list-style: none;
+  width: 50%;
+  margin: auto;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container nav .menu li {
+  display: inline-block;
+  position: relative;
+  padding: 16px 0;
+}
+.container nav .menu li:hover .sub-menu {
+  display: block;
+}
+.container nav .menu .sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background-color: #FFFFFF;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.09);
+  z-index: 1;
+}
+.container nav .menu .sub-menu li {
+  display: block;
+  padding: 10px 30px 10px 10px;
+}
+.container nav .menu li:hover.sub-menu {
+  display: block;
+}
+.container .banner {
+  width: 100%;
+}
+.container .banner img {
+  width: 100%;
+}
+.container .content {
+  width: 100%;
+  padding: 20px 0;
+}
+.container .content h1 {
+  text-align: center;
+  padding-bottom: 50px;
+}
+.container .content .row {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+.container .content .row .col-3 {
+  width: calc(25% - 20px);
+  margin-bottom: 20px;
+}
+.container .content .row .col-3 .container-col {
+  width: 100%;
+  box-shadow: 0 0 20px #ccc;
+  position: relative;
+}
+.container .content .row .col-3 .container-col .discount {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  right: 0;
+  padding: 15px;
+}
+.container .content .row .col-3 .container-col .discount span {
+  border-radius: 50%;
+  background-color: red;
+  color: #FFFFFF;
+  padding: 5px 3px;
+}
+.container .content .row .col-3 .container-col img {
+  width: 100%;
+}
+.container .content .row .col-3 .container-col a {
+  text-decoration: none;
+  color: #000;
+}
+.container .content .row .col-3 .container-col a h3 {
+  margin: 10px 0 20px 5px;
+}
+.container .content .row .col-3 .container-col p {
+  margin: 0 0 10px 5px;
+  color: #999;
+}
+.container .content .row .col-3 .container-col .rate {
+  margin-left: 5px;
+  width: 100%;
+  color: #ffae00;
+  font-size: small;
+}
+.container .content .row .col-3 .container-col hr {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+}
+.container .content .row .col-3 .container-col .price {
+  width: 100%;
+  padding: 10px 0;
+  font-size: large;
+}
+.container .content .row .col-3 .container-col .price .price-real {
+  color: #ff0000;
+  margin-left: 5px;
+}
+.container .content .row .col-3 .container-col .price .price-del {
+  float: right;
+  margin-right: 5px;
+}
+.container .content .row .col-3 .container-col:hover {
+  box-shadow: 0 0 10px #ccc;
+}
+.container .content .service {
+  align-items: baseline;
+}
+.container .content .service .box-content-service {
+  width: calc(25% - 10px);
+  margin-bottom: 20px;
+  text-align: center;
+}
+.container .content .service .box-content-service i {
+  font-size: 30px;
+  color: #5EC9FF;
+  margin-bottom: 20px;
+}
+.container .content .service .box-content-service h3 {
+  font-weight: 400;
+  color: rgb(51, 51, 51);
+  padding-bottom: 10px;
+}
+.container .content .service .box-content-service p {
+  color: rgb(120, 120, 120);
+  font-weight: 400;
+}
+.container .content .title {
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+.container .content .title .line {
+  width: 35%;
+}
+.container .content .title .slogan {
+  text-align: center;
+  width: 30%;
+}
+.container .content .title .slogan h1 {
+  width: 100%;
+  padding-bottom: 10px;
+  color: rgb(51, 51, 51);
+}
+.container .content .title .slogan h3 {
+  width: 100%;
+  color: rgb(156, 156, 156);
+}
+.container .content .time-sale {
+  text-align: center;
+}
+.container .content .time-sale .time {
+  width: 30%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .content .time-sale .time .item {
+  width: calc(25% - 10px);
+}
+.container .content .time-sale .time .item span {
+  background-color: #5EC9FF;
+  font-size: larger;
+  color: #FFFFFF;
+  padding: 10px;
+  border-radius: 5px;
+}
+.container .content .time-sale .time .item p {
+  padding: 20px 0;
+  font-style: italic;
+  color: rgb(51, 51, 51);
+}
+.container .content .btn {
+  padding: 20px 0;
+}
+.container .content .btn button {
+  margin: auto;
+  padding: 12px 35px;
+  border: none;
+  border-radius: 30px;
+  background-color: #5EC9FF;
+  color: white;
+  font-size: large;
+}
+.container .content .brand {
+  width: 80%;
+  justify-content: flex-start !important;
+}
+.container .content .brand img {
+  width: 150px;
+}
+.container .content .category .item {
+  width: calc(33.3333333333% - 10px);
+  margin-bottom: 10px;
+}
+.container .content .category a img {
+  width: 100%;
+}
+.container .content .category a img:hover {
+  box-shadow: 0px 5px 5px #989797;
+  transform: translate(0px, -3px);
+}
+.container footer {
+  width: 100%;
+  background-color: #1c2632;
+  color: #FFFFFF;
+}
+.container footer .footer-content {
+  display: flex;
+  width: 85%;
+  margin: auto;
+  justify-content: space-between;
+  padding: 50px;
+}
+.container footer .footer-content h3 {
+  margin-bottom: 15px;
+}
+.container footer .footer-content p {
+  margin: 15px 0;
+  font-size: large;
+  color: #afb0b1;
+}
+.container footer .footer-content a {
+  text-decoration: none;
+  color: #afb0b1;
+}
+.container footer .footer-content a:hover {
+  color: #e0e2e2;
+}
+.container footer .footer-content .contact {
+  width: 25%;
+}
+.container footer .footer-content .support {
+  width: 25%;
+}
+.container footer .footer-content .link {
+  width: 25%;
+}
+.container footer .footer-content .link i {
+  font-size: x-large;
+}
+.container footer .footer-content .fanpage {
+  width: 25%;
+}
+.container footer .copyright {
+  text-align: center;
+  border-top: 1px solid #252e3a;
+  line-height: 50px;
+}
+
+/*Start trang giới thiệu */
+.content-about {
+  width: 80%;
+  margin: auto;
+}
+.content-about a {
+  text-decoration: none;
+  color: #000;
+}
+.content-about h2 {
+  margin: 20px 0;
+}
+.content-about p {
+  margin-bottom: 20px;
+}
+.content-about img {
+  width: 100%;
+}
+
+/* End trang giới thiệu */
+/* Start trang liên hệ */
+.content-contact {
+  width: 80%;
+  margin: auto;
+}
+.content-contact a {
+  text-decoration: none;
+  color: #000;
+}
+.content-contact h2 {
+  margin: 20px 0;
+}
+.content-contact iframe {
+  width: 100%;
+}
+.content-contact .contact-info {
+  display: flex;
+  width: 100%;
+}
+.content-contact .contact-info h3 {
+  margin-bottom: 10px;
+}
+.content-contact .contact-info .form-contact {
+  width: 50%;
+}
+.content-contact .contact-info .form-contact .form {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.content-contact .contact-info .form-contact .form .input-info {
+  width: 50%;
+}
+.content-contact .contact-info .form-contact .form .input-info input {
+  width: 90%;
+  margin-bottom: 10px;
+  line-height: 25px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px #ccc;
+  padding-left: 5px;
+}
+.content-contact .contact-info .form-contact .form .input-mes {
+  width: 50%;
+}
+.content-contact .contact-info .form-contact .form .input-mes textarea {
+  width: 90%;
+  height: 90%;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px #ccc;
+}
+.content-contact .contact-info .form-contact .btn {
+  width: 30%;
+  margin: auto;
+}
+.content-contact .contact-info .form-contact .btn button {
+  width: 100%;
+  line-height: 30px;
+  background-color: #333333;
+  color: #FFFFFF;
+  border: none;
+}
+.content-contact .contact-info .info {
+  width: 50%;
+}
+.content-contact .contact-info .info .mb {
+  margin-bottom: 5px;
+}
+
+/* End trang liên hệ */
+/* Start trang Blog*/
+.content-blog {
+  width: 80%;
+  margin: auto;
+}
+.content-blog a {
+  text-decoration: none;
+  color: #000;
+}
+.content-blog main {
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+}
+.content-blog main article {
+  width: 70%;
+}
+.content-blog main article .title {
+  width: 90%;
+  padding: 10px 10px;
+  background-color: #E7E7E7;
+}
+.content-blog main article .item {
+  width: 50%;
+  margin-top: 20px;
+  box-shadow: 0px 3px 14px rgba(0, 0, 0, 0.15);
+  text-align: justify;
+}
+.content-blog main article .item img {
+  width: 80%;
+  margin-left: 10%;
+}
+.content-blog main article .item h3 {
+  margin-left: 5%;
+  color: #5EC9FF;
+  margin-bottom: 20px;
+}
+.content-blog main article .item i {
+  margin-left: 5%;
+  color: #999;
+}
+.content-blog main article .item p {
+  margin: 10px 20px;
+}
+.content-blog main article .item .btn {
+  text-align: right;
+}
+.content-blog main article .item .btn button {
+  padding: 5px 0;
+  width: 100px;
+  margin: 10px;
+  border: none;
+  background-color: #5EC9FF;
+  color: #FFFFFF;
+}
+.content-blog main article .item .btn button i {
+  color: #FFFFFF !important;
+  margin: 0;
+}
+.content-blog main aside {
+  width: 30%;
+}
+.content-blog main aside .title {
+  width: 100%;
+  padding: 10px 10px;
+  background-color: #E7E7E7;
+}
+.content-blog main aside .blog-item {
+  display: flex;
+  border: 1px solid #CCC;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.content-blog main aside .blog-item .img {
+  width: 30%;
+}
+.content-blog main aside .blog-item .img img {
+  width: 100%;
+}
+.content-blog main aside .blog-item .text {
+  width: 70%;
+  margin-left: 10px;
+}
+.content-blog main aside .blog-item .text p {
+  color: #5EC9FF;
+}
+.content-blog main aside img {
+  width: 100%;
+  margin-top: 10px;
+}
+.content-blog main aside img:hover {
+  box-shadow: 0px 5px 5px #989797;
+  transform: translate(0px, -3px);
+}
+
+/* End trang Blog*/
+/* Start trang đăng nhập */
+.content-user {
+  width: 80%;
+  margin: auto;
+}
+.content-user a {
+  text-decoration: none;
+  color: #000;
+}
+.content-user .user {
+  width: 30%;
+  margin: auto;
+  margin-top: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.09);
+}
+.content-user .user h3 {
+  margin: 10px 20px;
+  font-size: xx-large;
+}
+.content-user .user form {
+  padding: 10px;
+}
+.content-user .user .form-control {
+  display: block;
+  margin: auto;
+  width: 90%;
+  margin-bottom: 10px;
+  padding: 10px 5px;
+  border: 1px solid #ccc;
+}
+.content-user .user .form-control:focus {
+  outline: none;
+  box-shadow: 0 0 5px #5EC9FF;
+}
+.content-user .user p {
+  color: #000;
+}
+.content-user .user p a {
+  color: #5EC9FF;
+  text-decoration: none;
+}
+.content-user .user .btn {
+  background-color: #1c2632;
+  color: #FFFFFF;
+  margin-top: 15px;
+  display: block;
+  margin: auto;
+  width: 90%;
+  margin-bottom: 10px;
+  padding: 10px 5px;
+  border: none;
+}
+.content-user .user .btn:hover {
+  background-color: #ff0000;
+}
+
+/* End trang đăng nhập */
+/* CSS cho thiết bị di động */
+@media screen and (max-width: 767px) {
+  .container header {
+    position: sticky !important;
+    top: 0;
+    background-color: #FFFFFF;
+  }
+  .container header .header {
+    width: 90%;
+    margin: auto;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .container header .header .bars {
+    display: block;
+    width: 10%;
+  }
+  .container header .header .bars .fa-bars {
+    font-size: x-large;
+  }
+  .container header .header .tel {
+    display: none;
+  }
+  .container header .header .logo {
+    width: 70%;
+  }
+  .container header .header .logo img {
+    width: 100%;
+  }
+  .container header .header .search-accout-cart {
+    width: 20%;
+    display: flex;
+  }
+  .container header .header .search-accout-cart .fa-user {
+    display: none;
+  }
+  .container header .header .search-accout-cart a {
+    font-size: x-large;
+    margin: 5px;
+  }
+  .container #main {
+    transition: margin-left 0.2s;
+    padding: 16px;
+    overflow: hidden;
+  }
+  .container nav {
+    display: none;
+  }
+  .container .sidebar {
+    display: block;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #31373D;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  .container .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: large;
+    color: #FFFFFF;
+    display: block;
+    transition: 0.3s;
+  }
+  .container .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  .container .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  .container .content {
+    width: 100%;
+    padding: 50px 0;
+  }
+  .container .content h1 {
+    text-align: center;
+    padding-bottom: 50px;
+  }
+  .container .content .row {
+    width: 90% !important;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+  }
+  .container .content .row .col-3 {
+    width: calc(50% - 10px) !important;
+    margin-bottom: 20px;
+  }
+  .container .content .row .col-3 .container-col {
+    width: 100%;
+    box-shadow: 0 0 20px #ccc;
+  }
+  .container .content .row .col-3 .container-col .discount {
+    padding: 10px;
+  }
+  .container .content .row .col-3 .container-col img {
+    width: 100%;
+  }
+  .container .content .row .col-3 .container-col a {
+    text-decoration: none;
+    color: #000;
+  }
+  .container .content .row .col-3 .container-col a h3 {
+    margin: 10px 0 20px 5px;
+  }
+  .container .content .row .col-3 .container-col p {
+    margin: 0 0 10px 5px;
+    color: #999;
+  }
+  .container .content .row .col-3 .container-col .rate {
+    margin-left: 5px;
+    width: 100%;
+    color: #ffae00;
+    font-size: small;
+  }
+  .container .content .row .col-3 .container-col hr {
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+  }
+  .container .content .row .col-3 .container-col .price {
+    width: 100%;
+    padding: 10px 0;
+    font-size: large;
+  }
+  .container .content .row .col-3 .container-col .price .price-real {
+    color: #ff0000;
+    margin-left: 5px;
+  }
+  .container .content .row .col-3 .container-col .price .price-del {
+    float: right;
+    margin-right: 5px;
+  }
+  .container .content .row .col-3 .container-col:hover {
+    box-shadow: 0 0 10px #ccc;
+  }
+  .container .content .service .box-content-service {
+    width: 100%;
+  }
+  .container .content .brand img {
+    width: 100px;
+  }
+  .container .content .title .line {
+    width: 20% !important;
+  }
+  .container .content .title .slogan {
+    text-align: center;
+    width: 60% !important;
+  }
+  .container .content .time-sale .time {
+    width: 50% !important;
+  }
+  .container .content .category .item {
+    width: calc(50% - 10px);
+  }
+  .container footer .footer-content {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .container footer .footer-content .contact {
+    width: 100% !important;
+    margin-bottom: 10px;
+  }
+  .container footer .footer-content .support {
+    width: 100% !important;
+    margin-bottom: 10px;
+  }
+  .container footer .footer-content .link {
+    width: 100% !important;
+    margin-bottom: 10px;
+  }
+  .container footer .footer-content .fanpage {
+    width: 100% !important;
+  }
+  .container footer .footer-content .fanpage iframe {
+    width: 100%;
+  }
+  /* Start trang giới thiệu */
+  .content-about {
+    width: 90% !important;
+  }
+  /* End trang giới thiệu */
+  /* Start trang liên hệ */
+  .content-contact iframe {
+    height: 300px;
+  }
+  .content-contact .contact-info h3 {
+    margin-bottom: 10px;
+  }
+  .content-contact .contact-info .form-contact {
+    width: 100%;
+  }
+  .content-contact .contact-info .form-contact .form {
+    flex-wrap: wrap;
+  }
+  .content-contact .contact-info .form-contact .form .input-info {
+    width: 100%;
+  }
+  .content-contact .contact-info .form-contact .form .input-mes {
+    width: 100%;
+  }
+  .content-contact .contact-info .form-contact .form .input-mes textarea {
+    height: 200px;
+    margin-bottom: 10px;
+  }
+  /* End trang liên hệ */
+  /* Start trang Blog */
+  .content-blog {
+    width: 90%;
+  }
+  .content-blog main article {
+    width: 100%;
+  }
+  .content-blog main article .title {
+    width: 100%;
+  }
+  .content-blog main article .item {
+    width: 100%;
+  }
+  .content-blog main aside {
+    width: 100% !important;
+  }
+  .content-blog main aside .title {
+    width: 100% !important;
+  }
+  .content-blog main aside .blog-item {
+    width: 100% !important;
+  }
+  .content-blog main aside img {
+    width: 100% !important;
+    margin-top: 10px;
+  }
+  .content-blog main aside img:hover {
+    box-shadow: 0px 5px 5px #989797;
+    transform: translate(0px, -3px);
+  }
+  /* End trang Blog */
+  /* Start trang đăng nhập */
+  .content-user {
+    width: 95% !important;
+  }
+  .content-user .user {
+    width: 100% !important;
+  }
+  .content-user .user form {
+    padding: 20px !important;
+  }
+  /* End trang đăng nhập */
+}
+/* CSS cho máy tính bảng */
+@media screen and (max-width: 1024px) {
+  .container header {
+    width: 100%;
+  }
+  .container header .header {
+    width: 90%;
+  }
+  .container nav {
+    box-shadow: 0px 0px 5px #eee;
+    width: 100%;
+    background-color: #FFFFFF;
+    position: sticky !important;
+    top: 0;
+  }
+  .container nav a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+  }
+  .container nav a:hover {
+    color: #5EC9FF;
+  }
+  .container nav .menu {
+    width: 95%;
+  }
+  .container .content {
+    width: 100%;
+    padding: 20px 0;
+  }
+  .container .content h1 {
+    text-align: center;
+    padding-bottom: 50px;
+  }
+  .container .content .row {
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+  }
+  .container .content .row .col-3 {
+    width: calc(33.3333333333% - 10px);
+    margin-bottom: 20px;
+  }
+  .container .content .row .col-3 .discount {
+    padding: 12px !important;
+  }
+  .container .content .row .col-3 .container-col {
+    width: 100%;
+    box-shadow: 0 0 20px #ccc;
+  }
+  .container .content .service {
+    align-items: baseline;
+  }
+  .container .content .title .line {
+    width: 30%;
+  }
+  .container .content .title .slogan {
+    text-align: center;
+    width: 40%;
+  }
+  .container .content .time-sale .time {
+    width: 40%;
+  }
+  .container footer {
+    width: 100%;
+  }
+  .container footer .footer-content {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .container footer .footer-content .contact {
+    width: 50%;
+  }
+  .container footer .footer-content .support {
+    width: 50%;
+  }
+  .container footer .footer-content .link {
+    width: 50%;
+  }
+  .container footer .footer-content .link i {
+    font-size: x-large;
+  }
+  .container footer .footer-content .link i:first-child {
+    margin-right: 10px;
+  }
+  .container footer .footer-content .fanpage {
+    width: 50%;
+  }
+  .container footer .footer-content .fanpage iframe {
+    width: 100%;
+  }
+  /* Start trang giới thiệu */
+  .content-about {
+    width: 90%;
+  }
+  /* End trang giới thiệu */
+  /* Start trang liên hệ */
+  .content-contact {
+    width: 90%;
+  }
+  .content-contact h2 {
+    margin: 20px 0;
+  }
+  .content-contact iframe {
+    width: 100%;
+  }
+  .content-contact .contact-info {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .content-contact .contact-info .form-contact {
+    width: 100%;
+  }
+  .content-contact .contact-info .form-contact .btn {
+    margin-bottom: 10px;
+  }
+  .content-contact .contact-info .info {
+    width: 100%;
+  }
+  .content-contact .contact-info .info .mb {
+    margin-bottom: 5px;
+  }
+  /* End trang liên hệ*/
+  /* Start trang Blog */
+  .content-blog {
+    width: 90%;
+  }
+  .content-blog main {
+    flex-wrap: wrap;
+  }
+  .content-blog main article {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .content-blog main aside {
+    width: 100%;
+  }
+  .content-blog main aside .title {
+    width: 90%;
+  }
+  .content-blog main aside .blog-item {
+    width: 90%;
+  }
+  .content-blog main aside .blog-item .text {
+    font-size: large;
+  }
+  .content-blog main aside .blog-item .text p {
+    font-size: larger;
+  }
+  .content-blog main aside .img-center {
+    text-align: center;
+  }
+  .content-blog main aside .img-center img {
+    width: 50%;
+    margin-top: 10px;
+  }
+  .content-blog main aside .img-center img:hover {
+    box-shadow: 0px 5px 5px #989797;
+    transform: translate(0px, -3px);
+  }
+  /* End trang Blog */
+  /* Start trang đăng nhập */
+  .content-user {
+    min-height: 350px;
+  }
+  .content-user .user {
+    width: 80%;
+  }
+  .content-user .user form {
+    padding: 30px;
+  }
+  /* End trang đăng nhập */
+}/*# sourceMappingURL=index.css.map */
