@@ -159,8 +159,8 @@
         width: calc(100% / 2 - 10px);
     }
 
-    .footer {
-        clear: both;
+    .mid .list {
+        overflow: scroll;
     }
 }
 
@@ -181,7 +181,4 @@
         margin: 0;
     }
 
-    .footer {
-        clear: both;
-    }
 }

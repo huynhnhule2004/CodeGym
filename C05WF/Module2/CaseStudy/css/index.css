@@ -407,11 +407,11 @@
   border: 1px solid #ccc;
   box-shadow: 0 0 5px #ccc;
 }
-.content-contact .contact-info .form-contact .btn {
+.content-contact .contact-info .form-contact .btn-form {
   width: 30%;
   margin: auto;
 }
-.content-contact .contact-info .form-contact .btn button {
+.content-contact .contact-info .form-contact .btn-form button {
   width: 100%;
   line-height: 30px;
   background-color: #333333;
