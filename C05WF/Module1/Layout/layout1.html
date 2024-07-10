@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 1</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+       
+        .logo {
+            width: 100%;
+            height: 80px;
+            background-color: #ccc;
+            margin-bottom: 5px;
+        }
+
+        nav {
+            width: 100%;
+            height: 50px;
+            background-color: #ccc;
+            margin-bottom: 5px;
+        }
+
+        .banner {
+            width: 100%;
+            height: 150px;
+            background-color: #ccc;
+            margin-bottom: 5px;
+        }
+
+        main {
+            width: 100%;
+            height: 500px;
+        }
+
+        main .side-bar {
+            width: 25%;
+            height: 100%;
+            background-color: #ccc;
+            float: left;
+        }
+        main .body-area {
+            width: calc(75% - 10px);
+            margin-left: 10px;
+            height: 100%;
+            background-color: #ccc;
+            float: left;
+        }
+
+        footer {
+            margin-top: 5px;
+            width: 100%;
+            height: 50px;
+            background-color: #ccc;
+            clear: both;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Logo</div>
+            <nav>Navigation</nav>
+            <div class="banner">Header/Banner</div>
+        </header>
+
+        <main>
+            <div class="side-bar">Side Bar</div>
+            <div class="body-area">Body Area</div>
+        </main>
+
+        <footer>Footer</footer>
+    </div>
+</body>
+</html>

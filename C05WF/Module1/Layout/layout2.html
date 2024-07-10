@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        header {
+            width: 100%;
+            height: 80px;
+            background-color: #ccc;
+            margin-bottom: 10px;
+        }
+
+        header .logo {
+            width: 40%;
+            height: 100%;
+            float: left;
+        }
+
+        header nav {
+            width: 60%;
+            height: 100%;
+            float: left;
+        }
+
+        .banner {
+            width: 100%;
+            height: 200px;
+            background-color: #ccc;
+            margin-bottom: 10px;
+            
+        }
+
+        .intro-text {
+            width: 100%;
+            height: 180px;
+            margin-bottom: 10px;
+            background-color: #ccc;
+
+        }
+
+        main {
+            width: 100%;
+            height: 400px;
+            margin-bottom: 10px;
+        }
+
+        main .box {
+            width: calc(100% / 3);
+            height: 100%;
+            float: left;
+            background-color: #ccc;
+        }
+
+        main .mid-box {
+            width: calc(100% / 3 - 20px);
+            height: 100%;
+            float: left;
+            background-color: #ccc;
+            margin: 0 10px;
+        }
+
+        footer {
+            width: 100%;
+            height: 50px;
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Logo</div>
+            <nav>Navigation</nav>
+        </header>
+
+        <div class="banner">Header/Banner</div>
+
+        <div class="intro-text">Intro Text Area</div>
+
+        <main>
+            <div class="box">Box 1</div>
+            <div class="box mid-box">Box 2</div>
+            <div class="box">Box 3</div>
+        </main>
+
+        <footer>Footer</footer>
+    </div>
+</body>
+</html>
