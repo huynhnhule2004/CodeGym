@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý sản phẩm</title>
+</head>
+<body>
+<h3>Thêm sản phẩm</h3>
+<input type="number" id="id" placeholder="Nhập id">
+<input type="text" id="name" placeholder="Nhập tên">
+<input type="number" id="price" placeholder="Nhập giá">
+<input type="text" id="image" placeholder="Nhập link ảnh">
+<div id="btn">
+    <button onclick="add()">Thêm mới</button>
+</div>
+
+<h3>Danh sách sản phẩm</h3>
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Image</th>
+        <th colspan="2">Hành động</th>
+    </tr>
+    <tbody id="list-product">
+
+    </tbody>
+</table>
+
+<script src="Product.js"></script>
+<script src="Store.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

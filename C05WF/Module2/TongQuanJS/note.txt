@@ -1,0 +1,6 @@
+git init: Khởi tạo local repository => 1 lần tạo dự án 
+git add . || git add <tên file>: đưa các thay đổi vào staging 
+git commit -m "<comment>": dịch chuyển các thay đổi từ staging qua local repository, đồng thời tạo các snapshot tại các thời điểm
+git remote: Kết nối local repo với remote repo => 1 lần khi tạo dự án
+git push: Đẩy các thay đổi từ local repo lên remote repo
+git clone: Sao chép 1 project về máy
