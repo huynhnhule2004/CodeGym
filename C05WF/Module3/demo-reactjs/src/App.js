@@ -1,12 +1,16 @@
-import { Home } from "./Home";
+import { Content } from "./Content";
+import { DemoInput } from "./DemoInput";
+import { Exercise } from "./Exercise";
 
-
-function App() {
+function App() { //Function Component
+  let count = 0;
   return (
-    <>
-    <Home/>
-    </>
+    <div> 
+      {/* <Content></Content> */}
+      <Exercise/>
+    </div>
   );
 }
+
 
 export default App;
