@@ -1,1 +1,1 @@
-npm server để chạy db.json
+npm run server để chạy db.json
