@@ -1,0 +1,52 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "code": "P001",
+      "name": "Paracetamol",
+      "categoryId": 1,
+      "quantity": 100,
+      "price": 5000,
+      "importDate": "2024-10-28T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "code": "P002",
+      "name": "Ibuprofen",
+      "categoryId": 2,
+      "quantity": 200,
+      "price": 7000,
+      "importDate": "2024-10-27T10:00:00Z"
+    },
+    {
+      "id": "26c9",
+      "code": "PROD-0001",
+      "name": "Huynh Nhu",
+      "categoryId": "1",
+      "importDate": "2024-10-01",
+      "quantity": 1,
+      "price": 100
+    },
+    {
+      "id": "6120",
+      "code": "PROD-1234",
+      "name": "lethihuynhnhu",
+      "categoryId": "1",
+      "importDate": "2024-10-01",
+      "quantity": 3,
+      "price": 1000
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Thuốc giảm đau",
+      "description": "Các loại thuốc giảm đau."
+    },
+    {
+      "id": 2,
+      "name": "Thuốc kháng viêm",
+      "description": "Các loại thuốc kháng viêm."
+    }
+  ]
+}
