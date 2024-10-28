@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
 
 const ProductAdd = ({ onProductAdded }) => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
@@ -34,18 +34,25 @@ const ProductAdd = ({ onProductAdded }) => {
   });
 
   const handleSubmit = (values, { resetForm }) => {
+    // Chuyển đổi categoryId thành số
+    const productData = {
+      ...values,
+      categoryId: Number(values.categoryId), // Chuyển categoryId thành số
+    };
+
     // Gửi dữ liệu sản phẩm mới đến server
     fetch('http://localhost:5000/products', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(values),
+      body: JSON.stringify(productData), // Sử dụng productData đã chuyển đổi
     })
       .then(response => {
         if (response.ok) {
           alert('Thêm sản phẩm thành công!');
-          navigate('/')
+          navigate('/');
+          resetForm(); // Đặt lại form sau khi thêm sản phẩm thành công
         } else {
           alert('Có lỗi xảy ra, vui lòng thử lại.');
         }
