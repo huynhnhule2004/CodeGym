@@ -8,13 +8,13 @@ const ProductAdd = ({ onProductAdded }) => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    // Fetch categories from JSON server
+    
     fetch('http://localhost:5000/categories')
       .then(response => response.json())
       .then(data => setCategories(data));
   }, []);
 
-  // Định nghĩa schema cho Yup
+  
   const validationSchema = Yup.object().shape({
     code: Yup.string()
       .matches(/^PROD-\d{4}$/, 'Mã sản phẩm phải đúng định dạng PROD–XXXX')
@@ -34,25 +34,25 @@ const ProductAdd = ({ onProductAdded }) => {
   });
 
   const handleSubmit = (values, { resetForm }) => {
-    // Chuyển đổi categoryId thành số
+    
     const productData = {
       ...values,
-      categoryId: Number(values.categoryId), // Chuyển categoryId thành số
+      categoryId: Number(values.categoryId), 
     };
 
-    // Gửi dữ liệu sản phẩm mới đến server
+    
     fetch('http://localhost:5000/products', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(productData), // Sử dụng productData đã chuyển đổi
+      body: JSON.stringify(productData), 
     })
       .then(response => {
         if (response.ok) {
           alert('Thêm sản phẩm thành công!');
           navigate('/');
-          resetForm(); // Đặt lại form sau khi thêm sản phẩm thành công
+          resetForm(); 
         } else {
           alert('Có lỗi xảy ra, vui lòng thử lại.');
         }

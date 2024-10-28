@@ -10,7 +10,7 @@ const ProductList = () => {
   const [selectedCategory, setSelectedCategory] = useState('');
 
   useEffect(() => {
-    // Fetch products and categories from JSON server
+    
     fetch('http://localhost:5000/products')
       .then(response => response.json())
       .then(data => setProducts(data));
@@ -20,14 +20,14 @@ const ProductList = () => {
       .then(data => setCategories(data));
   }, []);
 
-  // Lọc sản phẩm dựa trên tên và thể loại
+  
   const filteredProducts = products.filter(product => {
     const matchesName = product.name.toLowerCase().includes(searchName.toLowerCase());
     const matchesCategory = selectedCategory ? product.categoryId === Number(selectedCategory) : true;
     return matchesName && matchesCategory;
   });
 
-  // Sắp xếp sản phẩm theo tên
+  
   const sortedProducts = filteredProducts.sort((a, b) => a.name.localeCompare(b.name));
 
   return (
@@ -78,7 +78,7 @@ const ProductList = () => {
       </Formik>
 
       {sortedProducts.length === 0 ? (
-        <p>Không có kết quả</p> // Thông báo không có sản phẩm nếu không tìm thấy
+        <p>Không có kết quả</p> 
       ) : (
         <table border={1}>
           <thead>
